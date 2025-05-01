@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 273775737759684864}
   - component: {fileID: 2667048925768572961}
   - component: {fileID: 7891165098674608432}
+  - component: {fileID: 2202883289431960398}
   m_Layer: 7
   m_Name: Projectile
   m_TagString: PlayerBullet
@@ -151,3 +152,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 75
   lifeTime: 1
+--- !u!114 &2202883289431960398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534307605724508835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2040b10537b7348b287de990329273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPolarity: 0

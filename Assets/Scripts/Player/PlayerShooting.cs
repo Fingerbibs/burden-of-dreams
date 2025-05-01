@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PlayerShooting : MonoBehaviour
         // Every 0.2 seconds a projectile may be fired
         fireCooldown -= Time.deltaTime;
 
-        if(Input.GetKey(KeyCode.Space) && fireCooldown <= 0f)
+        if(((Gamepad.current != null && Gamepad.current.buttonSouth.isPressed) || Input.GetKey(KeyCode.Space)) && fireCooldown <= 0f)
         {
             Shoot();
             fireCooldown = fireRate;
