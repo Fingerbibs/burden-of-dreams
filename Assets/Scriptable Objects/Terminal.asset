@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be4134411745884f9b52b779149e692, type: 3}
+  m_Name: Terminal
+  m_EditorClassIdentifier: 
+  sentences:
+  - Launching Mission Protocal\n// pulsewidth\n ...\n25133073114759303514251078753345//\n
+  - 'User.purpose = "Burden of Dreams";\nSource.getTranslation("German", User.purpose);\nUser.entropy
+    = true;\nUser.purposeFulfilled = false;\n  '
+  - ...\nERROR://Do not hold onto this light for too long\nERROR://THREAT DETECTED
+    9432874692657089

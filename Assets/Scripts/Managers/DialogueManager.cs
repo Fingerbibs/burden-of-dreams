@@ -21,17 +21,10 @@ public class DialogueManager : MonoBehaviour
     }
 
     void Update(){
-        if(dialogueActive && Input.GetButtonDown("Submit"))
-            if (!isTyping){
-                DisplayNextSentence();
-            }
-            else{
-                // Instantly Finishes Typing
-                
-                dialogueText.text = currentSentence;
-                isTyping = false;
-                StopAllCoroutines();
-            }
+        if (dialogueActive && !isTyping)
+        {
+            DisplayNextSentence();
+        }
     }
 
     public void StartDialogue(Dialogue dialogue){
@@ -61,12 +54,16 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence(string sentence){
         isTyping = true;
 
+        AudioManager.Instance.PlayTerminalRun();
+
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()){
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
 
+        AudioManager.Instance.StopSFX();
+        
         isTyping = false;
     }
 
