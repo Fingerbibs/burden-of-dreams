@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918521c54bea1dd4aac3bf6ce1abafbb, type: 3}
+  m_Name: EnemyWaves
+  m_EditorClassIdentifier: 
+  events:
+  - time: 3
+    enemyGroup:
+      enemies:
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0.25
+      path: {fileID: 3899378876835379079, guid: f3c01e2485c62c54897d65c3f171993f, type: 3}
+  - time: 4
+    enemyGroup:
+      enemies:
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      - {fileID: 204891648393140511, guid: ce898b65d0559074f9346fe100d441f3, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0.25
+      path: {fileID: 8269364235174001712, guid: 238f586afe282ad48b88004a7a585bb7, type: 3}
