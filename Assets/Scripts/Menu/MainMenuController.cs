@@ -6,7 +6,7 @@ public class MainMenuController : MonoBehaviour
     
     public void PlayGame()
     {
-        SceneManager.LoadScene("Main"); // Replace with your actual game scene name
+        SceneManager.LoadScene("Quote"); // Replace with your actual game scene name
     }
 
     public void QuitGame()

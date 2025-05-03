@@ -5,8 +5,8 @@ using System.Collections;
 public class PlayerPolarityController : MonoBehaviour
 {
     public Polarity currentPolarity = Polarity.Light;
-    public float rotationDuration = 0.2f; // How fast it rotates
-    public float colorTransitionDuration = 0.2f; // How fast color shift
+    public float rotationDuration = 0.2f; // How fast player rotates
+    public float colorTransitionDuration = 0.2f; // How fast color shifts
 
     private Material playerMaterial;
     private Color lightColor = Color.white;

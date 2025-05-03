@@ -6,9 +6,11 @@ public class ShooterEnemy : BaseEnemy
     public Transform firePoint;
     public float shootCooldown = 1f;
     private float cooldownTimer;
+    public Vector3 rotationSpeed = new Vector3(90f, 90f, 90f); // degrees per second
 
     protected override void Update()
     {
+        
         base.Update();
         cooldownTimer -= Time.deltaTime;
         
@@ -17,6 +19,7 @@ public class ShooterEnemy : BaseEnemy
             Shoot();
             cooldownTimer = shootCooldown;
         }
+        transform.Rotate(rotationSpeed * Time.deltaTime);
     }
 
     public override void Shoot()

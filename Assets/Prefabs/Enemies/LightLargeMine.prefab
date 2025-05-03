@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1380720239126720943}
   - component: {fileID: 7961732738556969625}
   - component: {fileID: 5139909305931938628}
+  - component: {fileID: 7360981148681479507}
+  - component: {fileID: 2648945730563027687}
   m_Layer: 7
   m_Name: LightLargeMine
   m_TagString: Enemy
@@ -121,7 +123,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ab5147b6949fc4b84d3b0d708df2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPolarity: 0
+--- !u!114 &7360981148681479507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450538451293031992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f51fd0012e94d0346866e2edfb04081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.25
+--- !u!114 &2648945730563027687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450538451293031992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5598ba74ad4ea4f9438321422381d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polarity: 0
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   darkColor: {r: 0, g: 0, b: 0, a: 1}
-  speed: 0.25

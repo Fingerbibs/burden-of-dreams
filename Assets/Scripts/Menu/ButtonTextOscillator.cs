@@ -19,8 +19,10 @@ public class ButtonTextOscillator : MonoBehaviour
 
     void Update()
     {
+        // If hovering over button
         if (EventSystem.current.currentSelectedGameObject == gameObject && textComponent != null)
         {
+            // Oscillation Math
             float t = (Mathf.Sin(Time.time * oscillationSpeed) + 1f) / 2f;
             textComponent.color = Color.Lerp(colorA, colorB, t);
         }

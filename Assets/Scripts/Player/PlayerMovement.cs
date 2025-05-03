@@ -21,19 +21,9 @@ public class PlayerMovement : MonoBehaviour
         float inputZ = Input.GetAxisRaw("Vertical");
         moveInput = new Vector3(inputX, 0f, inputZ).normalized;
 
-        // Acceleration and Deceleration
-        if (inputDirection.magnitude > 0)
-        {
-            currentVelocity = Vector3.MoveTowards(currentVelocity, inputDirection * moveSpeed, acceleration * Time.deltaTime);
-        }
-        else
-        {
-            currentVelocity = Vector3.MoveTowards(currentVelocity, Vector3.zero, deceleration * Time.deltaTime);
-        }
-
         // Apply movement
         Vector3 moveDelta = moveInput * moveSpeed * Time.deltaTime;
-        Vector3 newPos = transform.position + currentVelocity + moveDelta;
+        Vector3 newPos = transform.position + moveDelta;
 
         // Clamp movement within bounds
         newPos.x = Mathf.Clamp(newPos.x, moveLimitsX.x, moveLimitsX.y);

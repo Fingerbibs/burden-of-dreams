@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         AudioManager.Instance.StopSFX();
-        
+
         isTyping = false;
     }
 
