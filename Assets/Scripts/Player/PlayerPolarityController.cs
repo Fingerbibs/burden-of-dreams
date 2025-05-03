@@ -28,7 +28,7 @@ public class PlayerPolarityController : MonoBehaviour
 
     void SwitchPolarity()
     {
-        if(!isRotating)
+        if (!isRotating)
         {
             // Switch polarity
             currentPolarity = currentPolarity == Polarity.Light ? Polarity.Dark : Polarity.Light;

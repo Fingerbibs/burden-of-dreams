@@ -30,10 +30,17 @@ public class PatternedEnemySpawner : MonoBehaviour
         // For every enemy in the group initialize their path and wait between intervals to spawn the next.
         for (int i = 0; i < group.enemies.Length; i++)
         {
-            GameObject enemy = Instantiate(group.enemies[i]);
-            enemy.GetComponent<BaseEnemy>().Initialize(
-                group.path.GetComponentsInChildren<Transform>().Skip(0).ToArray()
-            );
+            Vector3 offset = group.spawnOffsetStep * i;
+
+            GameObject enemyGO = Instantiate(group.enemies[i], Vector3.zero, Quaternion.identity);
+            Transform[] pathPoints = group.path.GetComponentsInChildren<Transform>();
+            BaseEnemy enemy = enemyGO.GetComponent<BaseEnemy>();
+
+            if (enemy != null)
+            {
+                enemy.Initialize(pathPoints, offset);
+            }
+
             yield return new WaitForSeconds(group.spawnInterval);
         }
     }

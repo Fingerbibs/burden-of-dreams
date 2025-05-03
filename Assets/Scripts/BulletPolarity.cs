@@ -11,6 +11,11 @@ public class BulletPolarity : MonoBehaviour
 
         // Set the initial color based on the player's polarity
         UpdateBulletColor();
+
+        // Clone the material instance so this bullet doesn't affect others
+        bulletRenderer.material = new Material(bulletRenderer.material);
+        
+        UpdateBulletColor();
     }
 
     public void UpdateBulletColor()

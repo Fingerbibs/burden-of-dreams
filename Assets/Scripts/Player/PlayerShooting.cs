@@ -10,12 +10,20 @@ public class PlayerShooting : MonoBehaviour
 
     private float fireCooldown = 0f;
 
+    private PlayerPolarityController playerController;
+    private Polarity currentPolarity;
+
+    void Start()
+    {
+        playerController = GetComponent<PlayerPolarityController>();
+    }
+
     void Update()
     {
         // Every 0.2 seconds a projectile may be fired
         fireCooldown -= Time.deltaTime;
 
-        if(((Gamepad.current != null && Gamepad.current.buttonSouth.isPressed) || Input.GetKey(KeyCode.Space)) && fireCooldown <= 0f)
+        if (((Gamepad.current != null && Gamepad.current.buttonSouth.isPressed) || Input.GetKey(KeyCode.Space)) && fireCooldown <= 0f)
         {
             Shoot();
             fireCooldown = fireRate;
@@ -24,7 +32,14 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(projectilePrefab, firePoint1.position, firePoint1.rotation);
-        Instantiate(projectilePrefab, firePoint2.position, firePoint2.rotation);
+        currentPolarity = playerController.currentPolarity;
+        
+        GameObject bulletObj1 = Instantiate(projectilePrefab, firePoint1.position, firePoint1.rotation);
+        BulletPolarity bullet1 = bulletObj1.GetComponent<BulletPolarity>();
+        bullet1.bulletPolarity = currentPolarity;
+
+        GameObject bulletObj2 = Instantiate(projectilePrefab, firePoint2.position, firePoint2.rotation);
+        BulletPolarity bullet2 = bulletObj2.GetComponent<BulletPolarity>();
+        bullet2.bulletPolarity = currentPolarity;
     }
 }

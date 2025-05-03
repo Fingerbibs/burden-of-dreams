@@ -15,4 +15,13 @@ public class Projectile : MonoBehaviour
         transform.position += Vector3.forward * speed * Time.deltaTime;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        BaseEnemy enemy = other.GetComponent<BaseEnemy>();
+        if (enemy != null){
+            Destroy(enemy.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
 }

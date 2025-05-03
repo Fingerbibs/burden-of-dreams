@@ -4,22 +4,38 @@ public abstract class BaseEnemy : MonoBehaviour
 {
     public enum Polarity { Light, Dark }
     public Polarity enemyPolarity;
+    public Color lightColor = Color.white;
+    public Color darkColor = Color.black;
 
     public float speed = 1f;
     private float t = 0f;
 
     protected Transform[] path;
+    protected Vector3 pathOffset;
     private int segmentIndex = 0; // Start at the first waypoint (0 index)
 
-    public void Initialize(Transform[] pathPoints)
+    void Start()
+    {
+        Renderer renderer = GetComponentInChildren<Renderer>();
+        if (renderer != null)
+        {
+            Color tint = (enemyPolarity == Polarity.Light) ? lightColor : darkColor;
+
+            // Use a copy of the material to avoid affecting all enemies
+            renderer.material = new Material(renderer.material);
+            renderer.material.color = tint;
+        }
+    }
+    
+    public void Initialize(Transform[] pathPoints, Vector3 offset)
     {
         path = pathPoints;
-        transform.position = path[0].position; // Ensure enemy starts at the first waypoint
+        transform.position = path[0].position + offset; // Ensure enemy starts at the first waypoint
+        pathOffset = offset;
     }
 
     protected virtual void Update()
     {
-        Debug.Log("Current Position: " + transform.position + " | Segment Index: " + segmentIndex);
         // Early exit if path is not set up correctly or if there are not enough points
         if (path == null || path.Length < 4 || segmentIndex + 3 >= path.Length)
         {
@@ -54,7 +70,7 @@ public abstract class BaseEnemy : MonoBehaviour
             t
         );
 
-        transform.position = newPos;
+        transform.position = newPos + pathOffset;
     }
 
     // Catmull-Rom spline interpolation between four points
