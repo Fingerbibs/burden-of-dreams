@@ -1050,7 +1050,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.26666668, g: 0.3254902, b: 0.26666668, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2214,8 +2214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPolarity: 0
-  rotationDuration: 0.2
-  colorTransitionDuration: 0.2
+  rotationDuration: 0.1
+  colorTransitionDuration: 0.1
 --- !u!114 &1537360382
 MonoBehaviour:
   m_ObjectHideFlags: 0

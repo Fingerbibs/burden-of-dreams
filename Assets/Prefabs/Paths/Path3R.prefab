@@ -71,6 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8857180459960793135}
+  - component: {fileID: 8947946264655831809}
   m_Layer: 0
   m_Name: Path3R
   m_TagString: Untagged
@@ -97,6 +98,20 @@ Transform:
   - {fileID: 2929202831855423198}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8947946264655831809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605021579965105429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e25552f7c786643aa3ed98f7d3a11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoColor: {r: 1, g: 1, b: 1, a: 1}
+  resolution: 20
 --- !u!1 &4821448582535208842
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 4821448582535208842}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6, y: 0, z: -5.41}
+  m_LocalPosition: {x: -4.18, y: 0, z: -8.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -153,7 +168,7 @@ Transform:
   m_GameObject: {fileID: 9049770052069804000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.98, y: 0, z: -2.71}
+  m_LocalPosition: {x: 7.98, y: 0, z: -5.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
