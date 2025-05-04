@@ -57,7 +57,6 @@ public class EnemyWaveEditor : Editor
             ArrayUtility.Add(ref wave.events, new SpawnEvent());
         }
 
-
         serializedObject.ApplyModifiedProperties();
     }
 }
