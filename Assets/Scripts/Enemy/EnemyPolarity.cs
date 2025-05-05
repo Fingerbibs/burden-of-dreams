@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EnemyPolarity : MonoBehaviour
 {
-    public enum Polarity { Light, Dark }
     public Polarity polarity;
     public Color lightColor = Color.white;
     public Color darkColor = Color.black;

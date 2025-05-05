@@ -5,6 +5,18 @@ public class Projectile : MonoBehaviour
     public float speed = 20f;
     public float lifeTime = 5f;
     public int damage = 1;
+    
+
+    private BulletPolarity bulletPolarity;
+
+    private void Awake()
+    {
+        bulletPolarity = GetComponent<BulletPolarity>();
+        if (bulletPolarity == null)
+        {
+            Debug.LogError("BulletPolarity component is missing on the projectile.");
+        }
+    }
 
     void Start()
     {
@@ -18,10 +30,21 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        BaseEnemy enemy = other.GetComponent<BaseEnemy>();
-        if (enemy != null){
-            enemy.TakeDamage(damage);
-            Destroy(gameObject);
+        if (other.CompareTag("Enemy"))
+        {
+            BaseEnemy enemy = other.GetComponent<BaseEnemy>();
+            EnemyPolarity enemyPolarity = enemy.GetComponent<EnemyPolarity>();
+
+            if(bulletPolarity.bulletPolarity != enemyPolarity.polarity)
+            {
+                 enemy.TakeDamage(damage * 2);
+                 Destroy(gameObject);
+            }
+            else
+            {
+                enemy.TakeDamage(damage);
+                Destroy(gameObject);
+            }
         }
     }
 
