@@ -17,11 +17,11 @@ TagManager:
   - Background
   - Play
   - Border
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Shield_Light
+  - Enemy
+  - EnemyBullet_Light
+  - EnemyBullet_Dark
+  - Shield_Dark
   - 
   - 
   - 

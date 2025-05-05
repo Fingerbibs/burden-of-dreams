@@ -1,0 +1,73 @@
+using UnityEngine;
+
+public class Shield : MonoBehaviour
+{
+    public Material shieldMaterial;
+    private Color lightColor = new Color32(255,255,255,90);
+    private Color darkColor = new Color32(90,90,90,255);
+    public float colorTransitionDuration = 0.2f;
+
+    private PlayerPolarityController playerPolarity;
+    private Renderer shieldRenderer;
+
+    void Start()
+    {
+        playerPolarity = GetComponentInParent<PlayerPolarityController>();
+        shieldRenderer = GetComponent<Renderer>();
+        shieldMaterial = shieldRenderer.material;
+
+        if (playerPolarity != null)
+        {
+            UpdateShieldMaterial(playerPolarity.currentPolarity);
+            playerPolarity.OnPolarityChanged += UpdateShieldMaterial;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (playerPolarity != null)
+            playerPolarity.OnPolarityChanged -= UpdateShieldMaterial;
+    }
+
+    private void UpdateShieldMaterial(Polarity polarity)
+    {
+        Color targetColor = polarity == Polarity.Light ? lightColor : darkColor;
+        SetCollisionLayer(polarity);
+        StopAllCoroutines(); // In case player polarity changes rapidly
+        StartCoroutine(LerpShieldColor(targetColor));
+    }
+
+    private void SetCollisionLayer(Polarity polarity)
+    {
+        gameObject.layer = (polarity == Polarity.Light)
+            ? LayerMask.NameToLayer("Shield_Light")
+            : LayerMask.NameToLayer("Shield_Dark");
+    }
+
+    private System.Collections.IEnumerator LerpShieldColor(Color targetColor)
+    {
+        Color startColor = shieldMaterial.color;
+        float t = 0f;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime / colorTransitionDuration;
+            shieldMaterial.color = Color.Lerp(startColor, targetColor, t);
+            yield return null;
+        }
+
+        shieldMaterial.color = targetColor;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyBullet"))
+        {
+            BulletPolarity bullet = other.GetComponent<BulletPolarity>();
+            if (bullet != null && bullet.bulletPolarity == playerPolarity.currentPolarity)
+            {
+                Destroy(other.gameObject); // absorb bullet of same polarity
+            }
+        }
+    }
+}

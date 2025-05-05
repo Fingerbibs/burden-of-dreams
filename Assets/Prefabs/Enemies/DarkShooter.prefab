@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5011170956532255684}
   - component: {fileID: 8908280488672018235}
   - component: {fileID: 4365221577968856443}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: DarkShooter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5201385657045989464}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}

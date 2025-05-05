@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7383438172182147725}
   - component: {fileID: 1046481666433461019}
   - component: {fileID: 7487241242523318621}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: DarkSmallMine
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ab5147b6949fc4b84d3b0d708df2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
+  rotationSpeed: {x: 90, y: 90, z: 90}
 --- !u!114 &1046481666433461019
 MonoBehaviour:
   m_ObjectHideFlags: 0

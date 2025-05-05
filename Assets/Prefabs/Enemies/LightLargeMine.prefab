@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5139909305931938628}
   - component: {fileID: 7360981148681479507}
   - component: {fileID: 2648945730563027687}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: LightLargeMine
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  rotationSpeed: {x: 90, y: 90, z: 90}
 --- !u!114 &7360981148681479507
 MonoBehaviour:
   m_ObjectHideFlags: 0

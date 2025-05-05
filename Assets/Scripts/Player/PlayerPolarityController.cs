@@ -8,6 +8,10 @@ public class PlayerPolarityController : MonoBehaviour
     public float rotationDuration = 0.2f; // How fast player rotates
     public float colorTransitionDuration = 0.2f; // How fast color shifts
 
+    //Polarity Change Event
+    public delegate void PolarityChanged(Polarity newPolarity);
+    public event PolarityChanged OnPolarityChanged;
+
     private Material playerMaterial;
     private Color lightColor = Color.white;
     private Color darkColor = Color.black;
@@ -34,12 +38,15 @@ public class PlayerPolarityController : MonoBehaviour
             currentPolarity = currentPolarity == Polarity.Light ? Polarity.Dark : Polarity.Light;
 
             // Flip player around Y-axis
-            float targetY = currentPolarity == Polarity.Light ? 0f : 180f;
+            float targetY = currentPolarity == Polarity.Light ? 90f : 270f;
             StartCoroutine(RotateToY(targetY));
 
             // Change color
             Color targetColor = currentPolarity == Polarity.Light ? lightColor : darkColor;
             StartCoroutine(LerpColor(targetColor));
+
+            // Broadcast polarity change
+            OnPolarityChanged?.Invoke(currentPolarity);
         }
     }
 

@@ -21,6 +21,7 @@ public class TriFormationPattern : BulletPattern
         {
             Vector3 worldPosition = origin.TransformPoint(offset);
             GameObject bullet = Instantiate(projectilePrefab, worldPosition, origin.rotation);
+            bullet.gameObject.layer = (polarity == Polarity.Light) ? LayerMask.NameToLayer("EnemyBullet_Light") : LayerMask.NameToLayer("EnemyBullet_Dark");
 
             var bulletPolarity = bullet.GetComponent<BulletPolarity>();
             if (bulletPolarity != null) bulletPolarity.bulletPolarity = polarity;

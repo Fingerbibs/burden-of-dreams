@@ -37,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (other.CompareTag("Enemy")) //Enemy Collision
         {
+
             Debug.Log("Player collided with enemy");
             HandleHit();
         }
