@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public int playerLives = 3;
+    public LivesUI livesUI;
     public string gameOverScene = "GameOver";
 
     private void Awake()
@@ -21,10 +22,18 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Persist across scenes if needed
     }
 
+    void Start()
+    {
+        livesUI.UpdateLives(playerLives);
+    }
+
     public void PlayerDied(GameObject player)
     {
         playerLives--;
         Debug.Log("Lives left: " + playerLives);
+
+        if (livesUI != null)
+            livesUI.UpdateLives(playerLives);
 
         if (playerLives <= 0)
         {

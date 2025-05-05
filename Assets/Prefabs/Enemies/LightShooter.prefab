@@ -156,9 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  bulletPrefab: {fileID: 1023532104570401300, guid: 07eb6a913b06f1e449b138eb8cbdf812, type: 3}
-  firePoint: {fileID: 4138445246634772379}
-  shootCooldown: 1
+  fireCooldown: 0
+  pattern: {fileID: 11400000, guid: a147572dbb7b13c4ea3a87ae8ea02fb3, type: 2}
   rotationSpeed: {x: 90, y: 90, z: 90}
 --- !u!114 &8550343826547830937
 MonoBehaviour:

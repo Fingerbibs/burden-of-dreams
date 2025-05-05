@@ -27,7 +27,7 @@ MonoBehaviour:
       enemies:
       - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
       - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
-      groupSpawnDelay: 0
+      groupSpawnDelay: 0.75
       spawnInterval: 0
       path: {fileID: 7011480361619706703, guid: 7e8d217f5a21d3a46bb74cd3b38fb259, type: 3}
       spawnOffsetStep: {x: 2, y: 0, z: 0}
@@ -145,17 +145,3 @@ MonoBehaviour:
       spawnInterval: 0
       path: {fileID: 4352063648272631180, guid: 0af40f2672c3ee54bb5c0374f7ba0602, type: 3}
       spawnOffsetStep: {x: 0, y: 0, z: 1}
-  - time: 0
-    enemyGroup:
-      enemies: []
-      groupSpawnDelay: 0
-      spawnInterval: 0.25
-      path: {fileID: 0}
-      spawnOffsetStep: {x: 0, y: 0, z: 0}
-  - time: 0
-    enemyGroup:
-      enemies: []
-      groupSpawnDelay: 0
-      spawnInterval: 0.25
-      path: {fileID: 0}
-      spawnOffsetStep: {x: 0, y: 0, z: 0}

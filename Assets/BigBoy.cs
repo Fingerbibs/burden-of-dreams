@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class ShooterEnemy : BaseEnemy
+public class BigBoy : BaseEnemy
 {
-
     public float fireCooldown = 1f;
     public BulletPattern pattern;
     public Vector3 rotationSpeed = new Vector3(90f, 90f, 90f); // degrees per second
