@@ -9,7 +9,7 @@ public class RewardPattern : BulletPattern
 
     private float spawnRadius = 1f;
 
-    public override void Fire(Transform origin, Polarity enemyPolarity)
+    public override void Fire(Transform origin, Polarity polarity)
     {
         Renderer renderer = origin.GetComponentInChildren<Renderer>();
         if (renderer != null)
@@ -26,17 +26,9 @@ public class RewardPattern : BulletPattern
             Vector3 spawnPos = origin.position + randomOffset;
             Vector3 directionToPlayer = (player.transform.position - spawnPos).normalized;
 
+            // Create bullet and set polarity
             GameObject bullet = Instantiate(rewardBulletPrefab, spawnPos, Quaternion.LookRotation(directionToPlayer));
-
-            // Set polarity
-            var bulletPolarity = bullet.GetComponent<BulletPolarity>();
-            if (bulletPolarity != null)
-                bulletPolarity.bulletPolarity = enemyPolarity;
-
-            // Set layer
-            bullet.layer = (enemyPolarity == Polarity.Light)
-                ? LayerMask.NameToLayer("EnemyBullet_Light")
-                : LayerMask.NameToLayer("EnemyBullet_Dark");
+            changeBulletPolarity(bullet, polarity);
 
             // Move towards player
             Rigidbody rb = bullet.GetComponent<Rigidbody>();

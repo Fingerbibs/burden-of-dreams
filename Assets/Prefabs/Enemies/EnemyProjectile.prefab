@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2861628979035609237}
   - component: {fileID: 999071036901330428}
   - component: {fileID: 46423859558841328}
-  - component: {fileID: 1318120278704025993}
   - component: {fileID: 6671452130350528196}
+  - component: {fileID: 8919905410464064691}
   m_Layer: 11
   m_Name: EnemyProjectile
   m_TagString: EnemyBullet
@@ -138,20 +138,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1318120278704025993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023532104570401300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15585bed4d271f4299d00a15ed6e9ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
-  lifeTime: 1
 --- !u!114 &6671452130350528196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +151,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPolarity: 0
+--- !u!114 &8919905410464064691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023532104570401300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46ff21dcc6dff14fbcb55c3250e44ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 35
+  lifeTime: 1

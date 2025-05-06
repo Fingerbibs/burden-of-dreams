@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6421048629863238355}
   - component: {fileID: 581292997579006778}
   - component: {fileID: 9158008139107425666}
-  - component: {fileID: 2082091064354059743}
+  - component: {fileID: 1257369204772362644}
   m_Layer: 11
   m_Name: RewardProjectile
   m_TagString: EnemyBullet
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPolarity: 0
---- !u!114 &2082091064354059743
+--- !u!114 &1257369204772362644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7326661698262851570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15585bed4d271f4299d00a15ed6e9ac, type: 3}
+  m_Script: {fileID: 11500000, guid: d46ff21dcc6dff14fbcb55c3250e44ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10

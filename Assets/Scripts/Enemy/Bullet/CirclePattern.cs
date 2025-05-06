@@ -14,11 +14,7 @@ public class CirclePattern : BulletPattern
             float angle = i * Mathf.PI * 2f / bulletCount;
             Vector3 dir = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle));
             GameObject bullet = Instantiate(projectilePrefab, origin.position + dir * radius, Quaternion.LookRotation(dir));
-            // Set the bullet's layer based on its polarity
-            bullet.gameObject.layer = (polarity == Polarity.Light) ? LayerMask.NameToLayer("EnemyBullet_Light") : LayerMask.NameToLayer("EnemyBullet_Dark");
-
-            var bulletPolarity = bullet.GetComponent<BulletPolarity>();
-            if (bulletPolarity != null) bulletPolarity.bulletPolarity = polarity;
+            changeBulletPolarity(bullet, polarity);
         }
     }
 }
