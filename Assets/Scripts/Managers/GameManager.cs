@@ -8,13 +8,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Player Info")]
     public int playerLives = 3;
-    public float superMeter = 0f;
-    public float superMeterMax = 100f;
 
     [Header("UI")]
     public LivesUI livesUI;
-    public Slider superMeterSlider; // Reference to the UI slider for super meter
-
     public string gameOverScene = "GameOver";
 
     private void Awake()
@@ -34,13 +30,6 @@ public class GameManager : MonoBehaviour
     {
         // Initialize the lives UI counter
         livesUI.UpdateLives(playerLives);
-
-        // Initialize the super meter UI slider
-        if (superMeterSlider != null)
-        {
-            superMeterSlider.maxValue = superMeterMax;
-            superMeterSlider.value = superMeter;
-        }
     }
 
     public void PlayerDied(GameObject player)
@@ -70,20 +59,5 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over!");
         SceneManager.LoadScene(gameOverScene);
-    }
-
-    public void IncreaseSuperMeter(float amount)
-    {
-        superMeter += amount;
-        if (superMeter > superMeterMax)
-        {
-            superMeter = superMeterMax; // Ensure it doesn't exceed the max value
-        }
-
-        // Update the super meter UI slider
-        if (superMeterSlider != null)
-        {
-            superMeterSlider.value = superMeter;
-        }
     }
 }

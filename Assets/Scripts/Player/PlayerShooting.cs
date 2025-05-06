@@ -29,6 +29,11 @@ public class PlayerShooting : MonoBehaviour
             Shoot();
             fireCooldown = fireRate;
         }
+
+        if (((Gamepad.current != null && Gamepad.current.buttonWest.isPressed) || Input.GetKey(KeyCode.A)) && fireCooldown <= 0f)
+        {
+            LaunchMissile();
+        }
     }
 
     void Shoot()
@@ -42,5 +47,13 @@ public class PlayerShooting : MonoBehaviour
         GameObject bulletObj2 = Instantiate(projectilePrefab, firePoint2.position, rotation);
         BulletPolarity bullet2 = bulletObj2.GetComponent<BulletPolarity>();
         bullet2.bulletPolarity = currentPolarity;
+    }
+
+    void LaunchMissile()
+    {
+        currentPolarity = playerController.currentPolarity;
+
+        SuperMeter superMeter = GameManager.Instance.GetComponent<SuperMeter>();
+        superMeter.FireSuper(transform.position, currentPolarity);
     }
 }

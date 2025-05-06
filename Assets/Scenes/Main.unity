@@ -1637,6 +1637,7 @@ GameObject:
   - component: {fileID: 1140922955}
   - component: {fileID: 1140922956}
   - component: {fileID: 1140922957}
+  - component: {fileID: 1140922958}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1686,11 +1687,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: 5
-  superMeter: 90
-  superMeterMax: 120
   livesUI: {fileID: 523083647}
-  superMeterSlider: {fileID: 48009237}
   gameOverScene: GameOver
+--- !u!114 &1140922958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140922954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243fb5fcef9519049bfda648cf95f31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  superMeter: 0
+  superMeterMax: 100
+  homingMissilePrefab: {fileID: 1033661840964930072, guid: 5d1f35bf73be5c849ae883c9c4a54be0, type: 3}
+  superMeterSlider: {fileID: 48009237}
 --- !u!1 &1211883042
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,7 +2679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51e63ed48b8a204c82d69a6b46602e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invincibilityDuration: 2
+  invincibilityDuration: 4
 --- !u!136 &1537360385
 CapsuleCollider:
   m_ObjectHideFlags: 0

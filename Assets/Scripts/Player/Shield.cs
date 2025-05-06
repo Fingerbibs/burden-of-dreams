@@ -38,7 +38,10 @@ public class Shield : MonoBehaviour
             if (bullet != null && bullet.bulletPolarity == playerPolarity.currentPolarity)
             {
                 Destroy(other.gameObject); // absorb bullet of same polarity
-                GameManager.Instance.IncreaseSuperMeter(1f);
+
+                // Increase super meter
+                SuperMeter superMeter = GameManager.Instance.GetComponent<SuperMeter>();
+                superMeter.IncreaseSuperMeter(2f);
             }
         }
     }

@@ -13,6 +13,8 @@ public class CirclePattern : BulletPattern
         {
             float angle = i * Mathf.PI * 2f / bulletCount;
             Vector3 dir = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle));
+
+            // Create bullet and assign polarity
             GameObject bullet = Instantiate(projectilePrefab, origin.position + dir * radius, Quaternion.LookRotation(dir));
             changeBulletPolarity(bullet, polarity);
         }
