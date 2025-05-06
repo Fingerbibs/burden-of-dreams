@@ -37,12 +37,12 @@ public class Projectile : MonoBehaviour
 
             if(bulletPolarity.bulletPolarity != enemyPolarity.polarity)
             {
-                 enemy.TakeDamage(damage * 2);
+                 enemy.TakeDamage(damage * 2, bulletPolarity.bulletPolarity);
                  Destroy(gameObject);
             }
             else
             {
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(damage, bulletPolarity.bulletPolarity);
                 Destroy(gameObject);
             }
         }

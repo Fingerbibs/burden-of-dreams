@@ -12,6 +12,7 @@ public class PlayerShooting : MonoBehaviour
 
     private PlayerPolarityController playerController;
     private Polarity currentPolarity;
+    private Quaternion rotation = Quaternion.Euler(90,0,0);
 
     void Start()
     {
@@ -34,11 +35,11 @@ public class PlayerShooting : MonoBehaviour
     {
         currentPolarity = playerController.currentPolarity;
         
-        GameObject bulletObj1 = Instantiate(projectilePrefab, firePoint1.position, firePoint1.rotation);
+        GameObject bulletObj1 = Instantiate(projectilePrefab, firePoint1.position, rotation);
         BulletPolarity bullet1 = bulletObj1.GetComponent<BulletPolarity>();
         bullet1.bulletPolarity = currentPolarity;
 
-        GameObject bulletObj2 = Instantiate(projectilePrefab, firePoint2.position, firePoint2.rotation);
+        GameObject bulletObj2 = Instantiate(projectilePrefab, firePoint2.position, rotation);
         BulletPolarity bullet2 = bulletObj2.GetComponent<BulletPolarity>();
         bullet2.bulletPolarity = currentPolarity;
     }

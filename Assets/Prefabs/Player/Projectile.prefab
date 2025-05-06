@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2734106968172871619}
   - component: {fileID: 7283190311395139499}
   - component: {fileID: 2370871122588210753}
-  - component: {fileID: 273775737759684864}
+  - component: {fileID: 4958539866689269347}
   - component: {fileID: 2667048925768572961}
   - component: {fileID: 7891165098674608432}
   - component: {fileID: 2202883289431960398}
@@ -30,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3534307605724508835}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: -4.131}
-  m_LocalScale: {x: 0.05, y: 0.1, z: 0.2}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.52, y: 6, z: 2.572}
+  m_LocalScale: {x: 0.15, y: 0.6, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &7283190311395139499
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3534307605724508835}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2370871122588210753
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -90,8 +90,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &273775737759684864
-BoxCollider:
+--- !u!136 &4958539866689269347
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,12 +105,14 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.08162478
+  m_Height: 2.0090787
+  m_Direction: 1
+  m_Center: {x: 0.0051112967, y: 0.00026534, z: 0.007778585}
 --- !u!54 &2667048925768572961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,7 +137,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &7891165098674608432
@@ -150,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c47ebeefdbbcf418ef576c6666c5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 75
+  speed: 25
   lifeTime: 1
   damage: 1
 --- !u!114 &2202883289431960398

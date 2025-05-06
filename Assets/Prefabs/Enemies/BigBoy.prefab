@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  deathPattern: {fileID: 11400000, guid: 433dadfa9b399ae408809775d4ea8f5d, type: 2}
   fireCooldown: 1
   pattern: {fileID: 11400000, guid: 23ce604832f83d949991c2626ab45605, type: 2}
   rotationSpeed: {x: 0, y: 15, z: 0}

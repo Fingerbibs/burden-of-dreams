@@ -5,6 +5,8 @@ using System.Collections;
 public class PlayerPolarityController : MonoBehaviour
 {
     public Polarity currentPolarity = Polarity.Light;
+
+    [Header("Animation Duration")]
     public float rotationDuration = 0.2f; // How fast player rotates
     public float colorTransitionDuration = 0.2f; // How fast color shifts
 

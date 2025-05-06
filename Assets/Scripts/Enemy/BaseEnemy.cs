@@ -5,7 +5,10 @@ public abstract class BaseEnemy : MonoBehaviour
     protected EnemyMovement movement;
     protected EnemyPolarity polarity;
 
+    [Header("Basic Enemy Info")]
     public int health = 1;  // Health of the enemy
+    public BulletPattern deathPattern;
+
     private bool isDead = false;
 
     protected virtual void Awake()
@@ -19,13 +22,16 @@ public abstract class BaseEnemy : MonoBehaviour
         movement?.Initialize(path, offset);
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Polarity bulletPolarity)
     {
         if (isDead) return;
         health -= damage;
 
         if (health <= 0)
         {
+            if(bulletPolarity == polarity.polarity)
+                ReleaseReward();
+                
             Die();
         }
     }
@@ -34,6 +40,11 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         isDead = true;
         Destroy(gameObject);
+    }
+
+    public void ReleaseReward()
+    {
+        deathPattern.Fire(transform, polarity.polarity);
     }
 
     protected virtual void Update(){}
