@@ -1,9 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public abstract class BaseEnemy : MonoBehaviour
 {
     protected EnemyMovement movement;
     protected EnemyPolarity polarity;
+    protected Renderer renderer;
+    protected Material material;
 
     [Header("Basic Enemy Info")]
     public int health = 1;  // Health of the enemy
@@ -11,8 +14,14 @@ public abstract class BaseEnemy : MonoBehaviour
 
     private bool isDead = false;
 
+    // Disintegrate Parameters
+    private float fromHeight = 8f;
+    private float toHeight = 5f;
+    private float duration = 0.35f;
+
     protected virtual void Awake()
     {
+        renderer = GetComponentInChildren<Renderer>();
         movement = GetComponent<EnemyMovement>();
         polarity = GetComponent<EnemyPolarity>();
     }
@@ -39,6 +48,25 @@ public abstract class BaseEnemy : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        StartCoroutine(Disintegrate());
+    }
+
+    private IEnumerator Disintegrate()
+    {
+        material = renderer.material;
+        if (material == null) yield break;
+
+        float t = 0f;
+        while (t < duration)
+        {
+            float h = Mathf.Lerp(fromHeight, toHeight, t / duration);
+            material.SetFloat("_CutoffHeight", h);
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        material.SetFloat("_CutoffHeight", toHeight);
+
         Destroy(gameObject);
     }
 

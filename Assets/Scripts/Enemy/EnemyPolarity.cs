@@ -13,7 +13,7 @@ public class EnemyPolarity : MonoBehaviour
         {
             Color tint = (polarity == Polarity.Light) ? lightColor : darkColor;
             renderer.material = new Material(renderer.material);
-            renderer.material.color = tint;
+            renderer.material.SetColor("_Albedo", tint);
         }
     }
 }
