@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terminalRun: {fileID: 8300000, guid: 51ac69798b8c2aa47aed4e09df79f4b8, type: 3}
   germansTalking: {fileID: 8300000, guid: 0fa9bf44eb94ab54dbe5437c23817cf9, type: 3}
-  playerShoot: {fileID: 8300000, guid: cc1ecbcc557b7164c83d83ff1490820f, type: 3}
+  playerShoot: {fileID: 8300000, guid: b12c8ac4593c1dd478e22f91fe4b5b2c, type: 3}
   playerSwitch: {fileID: 8300000, guid: 98768977485a0d143bf73b7398043423, type: 3}
   playerAbsorb: {fileID: 8300000, guid: 1958dde5b23f66847bd12c34d18901b3, type: 3}
   playerDeath: {fileID: 8300000, guid: 359027657c05de745b02533a978dfb55, type: 3}

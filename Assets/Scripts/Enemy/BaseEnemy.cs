@@ -56,6 +56,8 @@ public abstract class BaseEnemy : MonoBehaviour
         material = renderer.material;
         if (material == null) yield break;
 
+        AudioManager.Instance.PlayDisintegrate();
+
         float t = 0f;
         while (t < duration)
         {

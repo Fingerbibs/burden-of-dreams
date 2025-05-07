@@ -34,6 +34,7 @@ public class Shield : MonoBehaviour
     {
         if (other.CompareTag("EnemyBullet"))
         {
+            AudioManager.Instance.PlayAbsorb();
             BulletPolarity bullet = other.GetComponent<BulletPolarity>();
             if (bullet != null && bullet.bulletPolarity == playerPolarity.currentPolarity)
             {
@@ -41,7 +42,7 @@ public class Shield : MonoBehaviour
 
                 // Increase super meter
                 SuperMeter superMeter = GameManager.Instance.GetComponent<SuperMeter>();
-                superMeter.IncreaseSuperMeter(2f);
+                superMeter.IncreaseSuperMeter(1f);
             }
         }
     }

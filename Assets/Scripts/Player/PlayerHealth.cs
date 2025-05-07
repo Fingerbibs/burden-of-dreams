@@ -29,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
+                AudioManager.Instance.PlayPlayerDeath();
                 // Take damage (destroy bullet)
                 HandleHit();
                 Destroy(other.gameObject);
@@ -37,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (other.CompareTag("Enemy")) //Enemy Collision
         {
-
+            AudioManager.Instance.PlayPlayerDeath();
             Debug.Log("Player collided with enemy");
             HandleHit();
         }

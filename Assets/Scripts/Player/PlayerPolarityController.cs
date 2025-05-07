@@ -28,6 +28,7 @@ public class PlayerPolarityController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) || (Gamepad.current != null && Gamepad.current.rightShoulder.isPressed))
         {
+            AudioManager.Instance.PlayPlayerShift();
             SwitchPolarity();
         }
     }

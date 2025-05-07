@@ -39,16 +39,16 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    public void PlaySFX(AudioClip clip,bool loop = false, float volume = 0.3f){
+    public void PlaySFX(AudioClip clip,bool loop = false, float volume = 0.3f, float pan = 0){
         sfxSource.clip = clip;
         sfxSource.loop = loop;
         sfxSource.volume = volume;
+        sfxSource.panStereo = pan;
         sfxSource.Play();
     }
 
-    public void PlaySFXOnce(AudioClip clip){
-        sfxSource.loop = false;
-        sfxSource.PlayOneShot(clip);
+    public void PlaySFXOnce(AudioClip clip, float volume = 1.0f){
+        sfxSource.PlayOneShot(clip, volume);
     }
 
     public void PlayVoice(AudioClip clip){
@@ -56,6 +56,10 @@ public class AudioManager : MonoBehaviour
         voiceSource.loop = true;
         voiceSource.time = Random.Range(0f, clip.length);
         voiceSource.Play();
+    }
+    
+    public void PlayVoiceOnce(AudioClip clip, float volume = 1.0f){
+        voiceSource.PlayOneShot(clip, volume);
     }
     
     public void StopVoice(){
@@ -67,7 +71,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //HELPER FUNCTIONS
-    public void PlayTerminalRun() => PlaySFX(library.terminalRun, true, 0.1f);
+    public void PlayTerminalRun() => PlayVoice(library.terminalRun);
     public void PlayGermansTalking() => PlayVoice(library.germansTalking);
 
     // Menu
@@ -77,4 +81,14 @@ public class AudioManager : MonoBehaviour
 
     // Stage
     public void PlayStage1Theme() => PlayMusic(library.stage1Theme);
+    // public void PlayDisintegrate() => PlaySFX(library.disintegrate,false, 0.1f, -0.7f);
+    public void PlayDisintegrate() => PlaySFXOnce(library.disintegrate);
+
+    // Player
+    public void PlayPlayerShoot() => PlaySFX(library.playerShoot, false, 0.09f, 0.7f);
+    public void PlayPlayerShift() => PlaySFXOnce(library.playerSwitch, 0.15f);
+    public void PlayAbsorb() => PlaySFXOnce(library.playerAbsorb, 0.7f);
+    public void PlayPlayerDeath() => PlaySFXOnce(library.playerDeath, 3f);
+    
+
 }

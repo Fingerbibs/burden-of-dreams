@@ -47,6 +47,8 @@ public class PlayerShooting : MonoBehaviour
         GameObject bulletObj2 = Instantiate(projectilePrefab, firePoint2.position, rotation);
         BulletPolarity bullet2 = bulletObj2.GetComponent<BulletPolarity>();
         bullet2.bulletPolarity = currentPolarity;
+
+        AudioManager.Instance.PlayPlayerShoot();
     }
 
     void LaunchMissile()
