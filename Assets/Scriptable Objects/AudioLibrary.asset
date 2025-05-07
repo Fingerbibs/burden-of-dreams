@@ -14,3 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terminalRun: {fileID: 8300000, guid: 51ac69798b8c2aa47aed4e09df79f4b8, type: 3}
   germansTalking: {fileID: 8300000, guid: 0fa9bf44eb94ab54dbe5437c23817cf9, type: 3}
+  playerShoot: {fileID: 8300000, guid: cc1ecbcc557b7164c83d83ff1490820f, type: 3}
+  playerSwitch: {fileID: 8300000, guid: 98768977485a0d143bf73b7398043423, type: 3}
+  playerAbsorb: {fileID: 8300000, guid: 1958dde5b23f66847bd12c34d18901b3, type: 3}
+  playerDeath: {fileID: 8300000, guid: 359027657c05de745b02533a978dfb55, type: 3}
+  disintegrate: {fileID: 8300000, guid: 384870929b1b5e34d8484a2188580040, type: 3}
+  enemyShoot: {fileID: 8300000, guid: b12c8ac4593c1dd478e22f91fe4b5b2c, type: 3}
+  menuHover: {fileID: 8300000, guid: 4bbf13591f437ce4c917575b160dfc34, type: 3}
+  menuSelect: {fileID: 8300000, guid: 101d18e9b5c9fca4a864e5f2e6f831c4, type: 3}
+  menuTheme: {fileID: 8300000, guid: aea475909f8ed914c8411dd5af0bd070, type: 3}
+  stage1Theme: {fileID: 8300000, guid: 3cfc9d6170376df46bc14b013eb26b7c, type: 3}

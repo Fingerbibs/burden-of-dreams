@@ -1,11 +1,30 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MainMenuController : MonoBehaviour
 {
+
+    void Start()
+    {
+        AudioManager.Instance.PlayMenuTheme();
+    }
     
     public void PlayGame()
     {
+        // Play sound first
+        AudioManager.Instance.PlayMenuSelect();
+        
+        // Start a coroutine to delay the scene load
+        StartCoroutine(LoadGameSceneWithDelay());
+    }
+
+    private IEnumerator LoadGameSceneWithDelay()
+    {
+        // Wait for the duration of the sound (you can adjust the time as needed)
+        yield return new WaitForSeconds(1f); // Adjust the delay to match your sound duration
+        
+        // Load the game scene
         SceneManager.LoadScene("Quote"); // Replace with your actual game scene name
     }
 

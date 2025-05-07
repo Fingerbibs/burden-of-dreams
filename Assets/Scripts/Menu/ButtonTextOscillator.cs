@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class ButtonTextOscillator : MonoBehaviour
+public class ButtonTextOscillator : MonoBehaviour,ISelectHandler, IDeselectHandler
 {
     private TextMeshProUGUI textComponent;
     private bool isSelected = false;
@@ -34,6 +34,7 @@ public class ButtonTextOscillator : MonoBehaviour
 
     public void OnSelect(BaseEventData eventData)
     {
+        AudioManager.Instance.PlayMenuHover();
         isSelected = true;
     }
 

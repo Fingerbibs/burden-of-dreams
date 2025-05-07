@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        AudioManager.Instance?.PlayStage1Theme();
         // Initialize the lives UI counter
         livesUI.UpdateLives(playerLives);
     }

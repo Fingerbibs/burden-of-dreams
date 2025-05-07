@@ -10,6 +10,7 @@ public class SuperMeter : MonoBehaviour
 
     [Header("UI")]
     public Slider superMeterSlider; // Reference to the UI slider for super meter
+    public SuperMeter3D superMeter3D;
 
     void Start()
     {
@@ -30,16 +31,15 @@ public class SuperMeter : MonoBehaviour
     {
         superMeter += amount;
         if (superMeter > superMeterMax)
-        {
             superMeter = superMeterMax; // Ensure it doesn't exceed the max value
-        }
 
         // Update the super meter UI slider
         if (superMeterSlider != null)
-        {
             superMeterSlider.value = superMeter;
-        }
+        
+        superMeter3D.UpdateMeter(superMeter);
     }
+
 
     public void FireSuper(Vector3 firePosition, Polarity playerPolarity)
     {
@@ -49,7 +49,7 @@ public class SuperMeter : MonoBehaviour
         if (chargeCount <= 0 || enemies.Length == 0) return;
 
         int missilesToFire = Mathf.Min(chargeCount, enemies.Length);
-        float spreadAngle = 120f; // total angle of spread
+        float spreadAngle = 90f; // total angle of spread
         float angleStep = (missilesToFire > 1) ? spreadAngle / (missilesToFire - 1) : 0f;
         float startAngle = -spreadAngle / 2f;
 

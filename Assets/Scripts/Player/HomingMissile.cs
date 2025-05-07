@@ -4,7 +4,7 @@ public class HomingMissile : MonoBehaviour
 {
     public float speed = 10f;
     public float rotateSpeed = 360f;
-    public float launchDuration = 0.3f; // Time before homing starts
+    public float launchDuration = 0.6f; // Time before homing starts
     public int damage = 10;
 
     private BulletPolarity missilePolarity;

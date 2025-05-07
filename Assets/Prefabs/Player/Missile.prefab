@@ -164,6 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotateSpeed: 200
+  rotateSpeed: 360
   launchDuration: 0
   damage: 10

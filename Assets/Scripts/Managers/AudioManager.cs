@@ -21,9 +21,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start(){
-        PlayGermansTalking();
-    }
+    private void Start(){}
 
     public void PlayMusic(AudioClip clip, bool loop = true){
         musicSource.clip = clip;
@@ -41,11 +39,16 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    public void PlaySFX(AudioClip clip){
+    public void PlaySFX(AudioClip clip,bool loop = false, float volume = 0.3f){
         sfxSource.clip = clip;
-        sfxSource.loop = true;
-        sfxSource.time = Random.Range(0f, clip.length);
+        sfxSource.loop = loop;
+        sfxSource.volume = volume;
         sfxSource.Play();
+    }
+
+    public void PlaySFXOnce(AudioClip clip){
+        sfxSource.loop = false;
+        sfxSource.PlayOneShot(clip);
     }
 
     public void PlayVoice(AudioClip clip){
@@ -64,6 +67,14 @@ public class AudioManager : MonoBehaviour
     }
 
     //HELPER FUNCTIONS
-    public void PlayTerminalRun() => PlaySFX(library.terminalRun);
+    public void PlayTerminalRun() => PlaySFX(library.terminalRun, true, 0.1f);
     public void PlayGermansTalking() => PlayVoice(library.germansTalking);
+
+    // Menu
+    public void PlayMenuTheme() => PlayMusic(library.menuTheme);
+    public void PlayMenuHover() => PlaySFX(library.menuHover, false, 0.1f);
+    public void PlayMenuSelect() => PlaySFX(library.menuSelect, false, 0.3f);
+
+    // Stage
+    public void PlayStage1Theme() => PlayMusic(library.stage1Theme);
 }
