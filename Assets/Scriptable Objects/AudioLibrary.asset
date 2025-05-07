@@ -17,7 +17,7 @@ MonoBehaviour:
   playerShoot: {fileID: 8300000, guid: b12c8ac4593c1dd478e22f91fe4b5b2c, type: 3}
   playerSwitch: {fileID: 8300000, guid: 98768977485a0d143bf73b7398043423, type: 3}
   playerAbsorb: {fileID: 8300000, guid: 1958dde5b23f66847bd12c34d18901b3, type: 3}
-  playerDeath: {fileID: 8300000, guid: 359027657c05de745b02533a978dfb55, type: 3}
+  playerDeath: {fileID: 8300000, guid: c7d53f018fd126047bf4867174a8a18c, type: 3}
   disintegrate: {fileID: 8300000, guid: 384870929b1b5e34d8484a2188580040, type: 3}
   enemyShoot: {fileID: 8300000, guid: b12c8ac4593c1dd478e22f91fe4b5b2c, type: 3}
   menuHover: {fileID: 8300000, guid: 4bbf13591f437ce4c917575b160dfc34, type: 3}
