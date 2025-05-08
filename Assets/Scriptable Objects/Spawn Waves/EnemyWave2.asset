@@ -14,8 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events:
   - time: 0
-    enemyGroup:
-      enemies:
+    enemyGroups:
+    - enemies:
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 5045447046009400851, guid: 762f6d7843e9a134cb02a4d12b629427, type: 3}
+      spawnOffsetStep: {x: -1.25, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}
+  - time: 4
+    enemyGroups:
+    - enemies:
       - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
       - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
       - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
@@ -23,17 +36,6 @@ MonoBehaviour:
       - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
       groupSpawnDelay: 0
       spawnInterval: 0
-      path: {fileID: 7426789306303598962, guid: be24fe1645441dc4785f68d8fbad592b, type: 3}
+      path: {fileID: 3605021579965105429, guid: 257570ca692afce468138bd12ca7b8f1, type: 3}
       spawnOffsetStep: {x: 1.25, y: 0, z: 0}
-  - time: 0
-    enemyGroup:
-      enemies:
-      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
-      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
-      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
-      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
-      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
-      groupSpawnDelay: 4
-      spawnInterval: 0
-      path: {fileID: 1492155526142391969, guid: 79194f2fad1958b4e8c3acfdf241f85b, type: 3}
-      spawnOffsetStep: {x: -1.25, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}

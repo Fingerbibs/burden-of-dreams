@@ -18,15 +18,19 @@ public class PatternedEnemySpawner : MonoBehaviour
         for (int i = 0; i < wave.events.Length; i++)
         {
             SpawnEvent evt = wave.events[i];
-
             float waitTime = evt.time - lastTime;
+
             if (waitTime > 0f)
                 yield return new WaitForSeconds(waitTime);
 
             lastTime = evt.time;
 
-            Vector3 po = evt.enemyGroup.pathOffset;
-            StartCoroutine(SpawnEnemyGroup(evt.enemyGroup, i, po));
+            for (int j = 0; j < evt.enemyGroups.Length; j++)
+            {
+                EnemyGroup group = evt.enemyGroups[j];
+                Vector3 po = group.pathOffset;
+                StartCoroutine(SpawnEnemyGroup(group, j, group.pathOffset));
+            }
         }
     }
 

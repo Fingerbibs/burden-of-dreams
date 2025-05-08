@@ -1,4 +1,5 @@
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditorInternal;
 using System.Linq;
@@ -50,3 +51,4 @@ public class EnemyWaveEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 }
+#endif

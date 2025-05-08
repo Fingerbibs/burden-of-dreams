@@ -26,6 +26,8 @@ public abstract class BaseEnemy : MonoBehaviour
         polarity = GetComponent<EnemyPolarity>();
     }
 
+    protected virtual void Start(){}
+
     public void Initialize(Transform[] path, Vector3 offset)
     {
         movement?.Initialize(path, offset);
@@ -48,6 +50,12 @@ public abstract class BaseEnemy : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        // Destroy beam if this is a BeamerEnemy
+        if (this is BeamerEnemy beamer && beamer.currentBeam != null)
+        {
+            Destroy(beamer.currentBeam);
+        }
+        
         StartCoroutine(Disintegrate());
     }
 

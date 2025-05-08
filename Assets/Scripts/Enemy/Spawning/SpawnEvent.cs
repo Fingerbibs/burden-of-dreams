@@ -4,5 +4,5 @@ using UnityEngine;
 public class SpawnEvent
 {
     public float time;
-    public EnemyGroup enemyGroup;
+    public EnemyGroup[] enemyGroups;
 }

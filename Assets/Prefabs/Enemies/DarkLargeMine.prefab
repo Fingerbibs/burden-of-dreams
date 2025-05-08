@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ab5147b6949fc4b84d3b0d708df2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 2
   deathPattern: {fileID: 11400000, guid: 433dadfa9b399ae408809775d4ea8f5d, type: 2}
   rotationSpeed: {x: 90, y: 90, z: 90}
 --- !u!114 &1627147382880814719
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51fd0012e94d0346866e2edfb04081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.25
+  speed: 0.4
 --- !u!114 &5475594454021777924
 MonoBehaviour:
   m_ObjectHideFlags: 0

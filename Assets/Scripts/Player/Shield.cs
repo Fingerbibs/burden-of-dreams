@@ -45,6 +45,18 @@ public class Shield : MonoBehaviour
                 superMeter.IncreaseSuperMeter(1f);
             }
         }
+        if (other.CompareTag("EnemyBeam"))
+        {
+            AudioManager.Instance.PlayAbsorb();
+            BulletPolarity bullet = other.GetComponent<BulletPolarity>();
+            if (bullet != null && bullet.bulletPolarity == playerPolarity.currentPolarity)
+            {
+
+                // Increase super meter
+                SuperMeter superMeter = GameManager.Instance.GetComponent<SuperMeter>();
+                superMeter.IncreaseSuperMeter(1f);
+            }
+        }
     }
 
     // Udates shield material, collision layer, and changes color

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7692111469203399342
+--- !u!114 &-7392976821221233473
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 2.15
+  m_Time: 43
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: a0d165bc9029aa24cac72c771b5edc8d, type: 2}
+  m_Asset: {fileID: 11400000, guid: 113a462200f0bf84196a49fd37cf1545, type: 2}
 --- !u!114 &-5798181007626887312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 34
+  m_Time: 37
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: c6395fe75d730284ca169220fd8d1710, type: 2}
@@ -48,6 +48,22 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: ed89b434edde86143960ef22bd0672ac, type: 2}
+--- !u!114 &-2442507757837840326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 0.75
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: a0d165bc9029aa24cac72c771b5edc8d, type: 2}
 --- !u!114 &-2429664336777519603
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,7 +90,8 @@ MonoBehaviour:
     - {fileID: -3981915718168111965}
     - {fileID: -5798181007626887312}
     - {fileID: 1119819971284172642}
-    - {fileID: -7692111469203399342}
+    - {fileID: -7392976821221233473}
+    - {fileID: -2442507757837840326}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

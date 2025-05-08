@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d4e3d7ab9b101499ff660f07bb66a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 3
   deathPattern: {fileID: 11400000, guid: 433dadfa9b399ae408809775d4ea8f5d, type: 2}
   fireCooldown: 2
   pattern: {fileID: 11400000, guid: a147572dbb7b13c4ea3a87ae8ea02fb3, type: 2}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f51fd0012e94d0346866e2edfb04081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.25
+  speed: 0.4
 --- !u!114 &4365221577968856443
 MonoBehaviour:
   m_ObjectHideFlags: 0
