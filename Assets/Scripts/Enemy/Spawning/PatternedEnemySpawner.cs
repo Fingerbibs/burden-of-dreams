@@ -7,12 +7,14 @@ public class PatternedEnemySpawner : MonoBehaviour
     public void TriggerWave(EnemyWave waveToSpawn)
     {
         StartCoroutine(SpawnWave(waveToSpawn));
+
     }
 
     IEnumerator SpawnWave(EnemyWave wave)
     {
         Debug.Log("Spawning wave");
         float lastTime = 0f;
+
         for (int i = 0; i < wave.events.Length; i++)
         {
             SpawnEvent evt = wave.events[i];
@@ -32,11 +34,20 @@ public class PatternedEnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(group.groupSpawnDelay);
 
+        // Create a temporary clone of the path
+        GameObject pathInstance = Instantiate(group.path);
+        pathInstance.transform.position += group.pathOffset;
+
+        // Optionally parent it under the spawner or another container
+        pathInstance.transform.SetParent(transform);
+
+        // Get path points excluding the root
+        Transform[] pathPoints = pathInstance.GetComponentsInChildren<Transform>();
+
         for (int i = 0; i < group.enemies.Length; i++)
         {
             Vector3 offset = (group.spawnOffsetStep * i) + (groupIndex * po);
             GameObject enemyGO = Instantiate(group.enemies[i], Vector3.zero, Quaternion.identity);
-            Transform[] pathPoints = group.path.GetComponentsInChildren<Transform>();
             BaseEnemy enemy = enemyGO.GetComponent<BaseEnemy>();
 
             if (enemy != null)
