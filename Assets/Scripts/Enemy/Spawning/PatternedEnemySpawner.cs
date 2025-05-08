@@ -4,40 +4,44 @@ using System.Collections;
 
 public class PatternedEnemySpawner : MonoBehaviour
 {
-    public EnemyWave wave;
-    private float timer = 0f;
-    private int nextEventIndex = 0;
-
-    void Update()
+    public void TriggerWave(EnemyWave waveToSpawn)
     {
-        timer += Time.deltaTime;
+        StartCoroutine(SpawnWave(waveToSpawn));
+    }
 
-        // Wait for next event
-        while (nextEventIndex < wave.events.Length && timer >= wave.events[nextEventIndex].time)
+    IEnumerator SpawnWave(EnemyWave wave)
+    {
+        Debug.Log("Spawning wave");
+        float lastTime = 0f;
+        for (int i = 0; i < wave.events.Length; i++)
         {
-            SpawnEvent evt = wave.events[nextEventIndex];
-            // Spawn enemy group
-            StartCoroutine(SpawnEnemyGroup(evt.enemyGroup));
-            nextEventIndex++;
+            SpawnEvent evt = wave.events[i];
+
+            float waitTime = evt.time - lastTime;
+            if (waitTime > 0f)
+                yield return new WaitForSeconds(waitTime);
+
+            lastTime = evt.time;
+
+            Vector3 po = evt.enemyGroup.pathOffset;
+            StartCoroutine(SpawnEnemyGroup(evt.enemyGroup, i, po));
         }
     }
 
-    // Handles group enemy spawning
-    IEnumerator SpawnEnemyGroup(EnemyGroup group)
+    IEnumerator SpawnEnemyGroup(EnemyGroup group, int groupIndex, Vector3 po)
     {
         yield return new WaitForSeconds(group.groupSpawnDelay);
 
-        // For every enemy in the group initialize their path and wait between intervals to spawn the next.
         for (int i = 0; i < group.enemies.Length; i++)
         {
-            Vector3 offset = group.spawnOffsetStep * i;
-
+            Vector3 offset = (group.spawnOffsetStep * i) + (groupIndex * po);
             GameObject enemyGO = Instantiate(group.enemies[i], Vector3.zero, Quaternion.identity);
             Transform[] pathPoints = group.path.GetComponentsInChildren<Transform>();
             BaseEnemy enemy = enemyGO.GetComponent<BaseEnemy>();
 
             if (enemy != null)
             {
+                Debug.Log($"Initializing enemy {i} with path and offset {offset}.");
                 enemy.Initialize(pathPoints, offset);
             }
 

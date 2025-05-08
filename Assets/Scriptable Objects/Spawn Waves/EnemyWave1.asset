@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918521c54bea1dd4aac3bf6ce1abafbb, type: 3}
+  m_Name: EnemyWave1
+  m_EditorClassIdentifier: 
+  events:
+  - time: 0
+    enemyGroup:
+      enemies:
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0.25
+      path: {fileID: 3899378876835379079, guid: b5228080469fb91428277b2a0c70d28f, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+  - time: 3
+    enemyGroup:
+      enemies:
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      groupSpawnDelay: 2
+      spawnInterval: 0.25
+      path: {fileID: 8269364235174001712, guid: 78d3e607e69b0a24fba62f8eec6a4b28, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
