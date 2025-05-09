@@ -9,7 +9,9 @@ public class BeamerEnemy : BaseEnemy
 
     private Vector3 lastPosition;
     private const float movementThreshold = 0.01f;
+
     public GameObject currentBeam;
+    private bool hasFired = false;
 
     private Transform player;
 
@@ -37,13 +39,16 @@ public class BeamerEnemy : BaseEnemy
         }
 
         bool isStationary = (transform.position - lastPosition).sqrMagnitude < movementThreshold * movementThreshold;
-
+        
+        if(!isStationary && hasFired)
+            Destroy(currentBeam);
         // 2) Handle firing
         fireCooldown -= Time.deltaTime;
         if (fireCooldown <= 0f && pattern != null && isStationary)
         {
             if (pattern is BeamPattern beamPattern) // Safely cast to BeamPattern
             {
+                hasFired = true;
                 currentBeam = beamPattern.FireAndReturn(transform, polarity.polarity);
             }
             fireCooldown = pattern.fireRate;

@@ -3087,6 +3087,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 150d6f38ce2b3894185fbb8b163c24c6, type: 2}
     - {fileID: 11400000, guid: a0d165bc9029aa24cac72c771b5edc8d, type: 2}
     - {fileID: 11400000, guid: 113a462200f0bf84196a49fd37cf1545, type: 2}
+    - {fileID: 11400000, guid: 91740417b7d9200409c66db40c3d9f75, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -3137,7 +3138,7 @@ MonoBehaviour:
           m_MethodName: TriggerWave
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: cb8c12c3971e4b44cb50746703354b66, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: e5e3eb289244dad4a8de20314599e8a0, type: 2}
             m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -3152,6 +3153,20 @@ MonoBehaviour:
           m_Mode: 2
           m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: d085d3266427d474eb11f580f8b43dda, type: 2}
+            m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1122281066}
+          m_TargetAssemblyTypeName: PatternedEnemySpawner, Scripts
+          m_MethodName: TriggerWave
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: cb8c12c3971e4b44cb50746703354b66, type: 2}
             m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -3218,7 +3233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821647bf999da8f42bbbc721328e5a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 5
+  playerLives: 3
+  invincibilityDuration: 1
   livesUI: {fileID: 523083647}
   gameOverScene: GameOver
 --- !u!114 &1140922958
@@ -3233,9 +3249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243fb5fcef9519049bfda648cf95f31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  superMeter: 0
+  superMeter: 100
   superMeterMax: 120
-  homingMissilePrefab: {fileID: 1033661840964930072, guid: 5d1f35bf73be5c849ae883c9c4a54be0, type: 3}
+  baseDamage: 10
+  linePrefab: {fileID: 5932461089876887109, guid: b6ca1c5ea7340514a998c5aea0685d41, type: 3}
   superMeterSlider: {fileID: 48009237}
   superMeter3D: {fileID: 1808325273}
 --- !u!1 &1211883042
@@ -3953,7 +3970,7 @@ Transform:
   m_GameObject: {fileID: 1347045290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.13, z: 0.09}
+  m_LocalPosition: {x: -0, y: 0.13, z: 0}
   m_LocalScale: {x: 3.8000028, y: 3.8, z: 2.235295}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4848,7 +4865,7 @@ Transform:
   m_GameObject: {fileID: 1537360374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 6.02, z: -5}
+  m_LocalPosition: {x: -0.017, y: 6.02, z: -5}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.85}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4942,7 +4959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51e63ed48b8a204c82d69a6b46602e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invincibilityDuration: 4
+  invincibilityDuration: 20
 --- !u!136 &1537360385
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5916,71 +5933,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093785731}
   m_CullTransparentMesh: 1
---- !u!1001 &972285276027698536
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 157804000115577175, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2115756049507935801, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: m_Name
-      value: LightBeamerEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377900027244589255, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: turnSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377900027244589255, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
-      propertyPath: fireCooldown
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5994,4 +5946,3 @@ SceneRoots:
   - {fileID: 903879216}
   - {fileID: 1104169994}
   - {fileID: 106856229}
-  - {fileID: 972285276027698536}

@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class SuperMeter : MonoBehaviour
 {
-    [Header("Player")]
+    [Header("Player Super Meter")]
     public float superMeter = 0f;
     public float superMeterMax = 100f;
-    public GameObject homingMissilePrefab; // Assign in Inspector
+    public int baseDamage = 10;
+    public LineRenderer linePrefab;
 
     [Header("UI")]
     public Slider superMeterSlider; // Reference to the UI slider for super meter
@@ -49,29 +51,34 @@ public class SuperMeter : MonoBehaviour
         if (chargeCount <= 0 || enemies.Length == 0) return;
 
         int missilesToFire = Mathf.Min(chargeCount, enemies.Length);
-        float spreadAngle = 90f; // total angle of spread
-        float angleStep = (missilesToFire > 1) ? spreadAngle / (missilesToFire - 1) : 0f;
-        float startAngle = -spreadAngle / 2f;
 
         for (int i = 0; i < missilesToFire; i++)
         {
-            float angle = startAngle + angleStep * i;
-            Quaternion rotation = Quaternion.Euler(0, angle, 0);
-            Vector3 direction = rotation * Vector3.forward;
-            Vector3 spawnPos = firePosition + direction.normalized * 1.5f; // offset from player
+            BaseEnemy target = enemies[i].GetComponent<BaseEnemy>();
+            EnemyPolarity targetPolarity = target.GetComponent<EnemyPolarity>();
 
-            GameObject missile = Instantiate(homingMissilePrefab, firePosition, Quaternion.identity);
-            HomingMissile hm = missile.GetComponent<HomingMissile>();
-            BulletPolarity hmPolarity = missile.GetComponent<BulletPolarity>();
-            hmPolarity.bulletPolarity = playerPolarity;
+            // Apply damage based on polarity logic
+            int damage = (targetPolarity.polarity != playerPolarity) ? baseDamage * 2 : baseDamage;
+            target.TakeDamage(damage, playerPolarity);
 
-            hm.SetTarget(enemies[i]); // Make sure this method exists in your HomingMissile script
+            // Draw laser line
+            StartCoroutine(DrawLaserLine(firePosition, target.transform.position));
         }
 
+        // Subtract charge
         superMeter -= missilesToFire * 10f;
         if (superMeterSlider != null)
             superMeterSlider.value = superMeter;
 
+    }
+
+    private IEnumerator DrawLaserLine(Vector3 start, Vector3 end)
+    {
+        LineRenderer line = Instantiate(linePrefab, start, Quaternion.identity);
+        line.SetPosition(0, start);
+        line.SetPosition(1, end);
+        yield return new WaitForSeconds(0.2f); // Show the line briefly
+        Destroy(line.gameObject);
     }
 
 }

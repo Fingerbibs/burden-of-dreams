@@ -7,6 +7,6 @@ public class LivesUI : MonoBehaviour
 
     public void UpdateLives(int lives)
     {
-        livesText.text = $"Lives: {lives}";
+        livesText.text = $"Lives = {lives};";
     }
 }

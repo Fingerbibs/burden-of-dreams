@@ -14,4 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events:
   - time: 0
-    enemyGroups: []
+    enemyGroups:
+    - enemies:
+      - {fileID: 5351230466510774750, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 7426789306303598962, guid: be24fe1645441dc4785f68d8fbad592b, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}
+    - enemies:
+      - {fileID: 2579416163840797706, guid: a630657c329d94a40a4379e8792fb031, type: 3}
+      groupSpawnDelay: 0.25
+      spawnInterval: 0
+      path: {fileID: 1492155526142391969, guid: 79194f2fad1958b4e8c3acfdf241f85b, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}

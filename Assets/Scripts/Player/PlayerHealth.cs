@@ -29,7 +29,6 @@ public class PlayerHealth : MonoBehaviour
             }
             else
             {
-                AudioManager.Instance.PlayPlayerDeath();
                 // Take damage (destroy bullet)
                 HandleHit();
                 Destroy(other.gameObject);
@@ -38,23 +37,25 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (other.CompareTag("Enemy")) //Enemy Collision
         {
-            AudioManager.Instance.PlayPlayerDeath();
             Debug.Log("Player collided with enemy");
             HandleHit();
+        }
+        else if (other.CompareTag("EnemyBeam"))
+        {
+            BulletPolarity bullet = other.GetComponent<BulletPolarity>();
+            currentPolarity = polarityController.currentPolarity;
+
+            if (bullet.bulletPolarity != currentPolarity)
+            {
+                // Take damage (destroy bullet)
+                HandleHit();
+                Debug.Log("Player collided with Bullet");
+            }
         }
     }
 
     void HandleHit()
     {
         GameManager.Instance.PlayerDied(gameObject);
-        StartCoroutine(InvincibilityCoroutine());
-    }
-
-    private IEnumerator InvincibilityCoroutine()
-    {
-        isInvincible = true;
-        // Optionally flash the player or disable collisions
-        yield return new WaitForSeconds(invincibilityDuration);
-        isInvincible = false;
     }
 }

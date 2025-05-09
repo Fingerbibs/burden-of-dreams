@@ -73,16 +73,17 @@ public class PlayerPolarityController : MonoBehaviour
 
     IEnumerator LerpColor(Color targetColor)
     {
-        Color startColor = playerMaterial.color;
+        Color startColor = playerMaterial.GetColor("_Albedo"); // Albedo color
         float t = 0f;
 
         while (t < 1f)
         {
             t += Time.deltaTime / colorTransitionDuration;
-            playerMaterial.color = Color.Lerp(startColor, targetColor, t);
+            Color currentColor = Color.Lerp(startColor, targetColor, t);
+            playerMaterial.SetColor("_Albedo", currentColor);
             yield return null;
         }
 
-        playerMaterial.color = targetColor;  // Ensure exact final value
+        playerMaterial.SetColor("_Albedo", targetColor); // Finalize color
     }
 }
