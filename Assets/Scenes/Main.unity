@@ -1132,8 +1132,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 2634022911
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.6117647}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3185,6 +3185,7 @@ GameObject:
   - component: {fileID: 1140922956}
   - component: {fileID: 1140922957}
   - component: {fileID: 1140922958}
+  - component: {fileID: 1140922959}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -3234,6 +3235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: 3
+  startupTime: 0
   invincibilityDuration: 1
   livesUI: {fileID: 523083647}
   gameOverScene: GameOver
@@ -3249,12 +3251,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243fb5fcef9519049bfda648cf95f31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  superMeter: 100
+  superMeter: 0
   superMeterMax: 120
   baseDamage: 10
   linePrefab: {fileID: 5932461089876887109, guid: b6ca1c5ea7340514a998c5aea0685d41, type: 3}
   superMeterSlider: {fileID: 48009237}
   superMeter3D: {fileID: 1808325273}
+--- !u!114 &1140922959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140922954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37a859a817fafb449a2ca461d933d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 9ff4e1d96779e644eaf3e654ae5cc562, type: 2}
+  dialogueManager: {fileID: 1080459874}
 --- !u!1 &1211883042
 GameObject:
   m_ObjectHideFlags: 0

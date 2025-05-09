@@ -13,6 +13,7 @@ public class SuperMeter : MonoBehaviour
     [Header("UI")]
     public Slider superMeterSlider; // Reference to the UI slider for super meter
     public SuperMeter3D superMeter3D;
+    private MissileDialogue missileDialogue;
 
     void Start()
     {
@@ -22,6 +23,8 @@ public class SuperMeter : MonoBehaviour
             superMeterSlider.maxValue = superMeterMax;
             superMeterSlider.value = superMeter;
         }
+
+        missileDialogue = gameObject.GetComponent<MissileDialogue>();
     }
 
     public int GetChargeCount()
@@ -45,6 +48,7 @@ public class SuperMeter : MonoBehaviour
 
     public void FireSuper(Vector3 firePosition, Polarity playerPolarity)
     {
+        missileDialogue.toTerminal();
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         int chargeCount = GetChargeCount();

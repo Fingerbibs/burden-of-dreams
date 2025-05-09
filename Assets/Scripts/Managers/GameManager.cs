@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [Header("Player Info")]
     public int playerLives = 3;
     private bool isInvincible = false;
+    public float startupTime = 15;
 
     public float invincibilityDuration = 20;
     // Disintegrate Parameters
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance?.PlayStage1Theme();
         // Initialize the lives UI counter
         livesUI.UpdateLives(playerLives);
+        GameObject player = GameObject.Find("Player");
+        StartCoroutine(StartControl(player));
     }
 
     public void PlayerDied(GameObject player)
@@ -169,6 +172,13 @@ public class GameManager : MonoBehaviour
         movement.enabled = controllable;
         shooting.enabled = controllable;
         polarity.enabled = controllable;
+    }
+
+    private IEnumerator StartControl(GameObject player)
+    {
+        PlayerControllable(player, false);
+        yield return new WaitForSeconds(startupTime);
+        PlayerControllable(player, true);
     }
 
     private void GameOver()

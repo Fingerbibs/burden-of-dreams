@@ -22,5 +22,6 @@ MonoBehaviour:
   enemyShoot: {fileID: 8300000, guid: b12c8ac4593c1dd478e22f91fe4b5b2c, type: 3}
   menuHover: {fileID: 8300000, guid: 4bbf13591f437ce4c917575b160dfc34, type: 3}
   menuSelect: {fileID: 8300000, guid: 101d18e9b5c9fca4a864e5f2e6f831c4, type: 3}
+  Death3: {fileID: 8300000, guid: 2b69f2b6897db7b46a9d535ffb153186, type: 3}
   menuTheme: {fileID: 8300000, guid: aea475909f8ed914c8411dd5af0bd070, type: 3}
   stage1Theme: {fileID: 8300000, guid: 3cfc9d6170376df46bc14b013eb26b7c, type: 3}
