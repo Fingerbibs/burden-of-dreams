@@ -12,9 +12,5 @@ public class DialogueController : MonoBehaviour
         dialogueManager.StartDialogue(dialogue);
     }
 
-    // IEnumerator BeginDialogueAfterDelay(float delay)
-    // {
-    //     yield return new WaitForSeconds(delay);
-    //     dialogueManager.StartDialogue(dialogue);
-    // }
+    
 }

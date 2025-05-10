@@ -15,6 +15,23 @@ public class BeamerEnemy : BaseEnemy
 
     private Transform player;
 
+    public override void Initialize(Transform[] path, Vector3 offset)
+    {
+        base.Initialize(path, offset); // Keep base movement/path logic
+
+        if (currentBeam != null && currentBeam.scene.IsValid())
+        {
+            Destroy(currentBeam);
+            currentBeam = null;
+        }
+
+        // Beamer-specific setup
+        currentBeam = null;
+        fireCooldown = 1f;
+        hasFired = false;
+
+    }
+
     protected override void Start()
     {
         lastPosition = transform.position;
@@ -41,10 +58,13 @@ public class BeamerEnemy : BaseEnemy
         bool isStationary = (transform.position - lastPosition).sqrMagnitude < movementThreshold * movementThreshold;
         
         if(!isStationary && hasFired)
+        {
+            hasFired = false;
             Destroy(currentBeam);
+        }
         // 2) Handle firing
         fireCooldown -= Time.deltaTime;
-        if (fireCooldown <= 0f && pattern != null && isStationary)
+        if (fireCooldown <= 0f && pattern != null && isStationary && hasFired == false)
         {
             if (pattern is BeamPattern beamPattern) // Safely cast to BeamPattern
             {

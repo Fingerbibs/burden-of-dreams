@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7920ba800f1cbe6468a463f55ac927a6, type: 3}
   m_Name: CirclePattern
   m_EditorClassIdentifier: 
-  fireRate: 4
-  projectilePrefab: {fileID: 1023532104570401300, guid: 07eb6a913b06f1e449b138eb8cbdf812, type: 3}
-  bulletCount: 8
-  radius: 5
+  fireRate: 2
+  projectilePrefab: {fileID: 8236385953832523590, guid: 1ad589b9b9c96d34bbd602fd4fa5e5be, type: 3}
+  bulletCount: 20
+  radius: 2

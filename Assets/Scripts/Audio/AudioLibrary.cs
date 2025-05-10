@@ -17,6 +17,7 @@ public class AudioLibrary : ScriptableObject
     public AudioClip menuHover;
     public AudioClip menuSelect;
     public AudioClip Death3;
+    public AudioClip quoteTheme;
 
     [Header ("Music")]
     public AudioClip menuTheme;

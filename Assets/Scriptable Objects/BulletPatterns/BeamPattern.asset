@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be973f392511c6b4ea94517ca778bee8, type: 3}
   m_Name: BeamPattern
   m_EditorClassIdentifier: 
-  fireRate: 100
+  fireRate: 1
   beamPrefab: {fileID: 4186352805985378261, guid: 2672c466f3d90204bb42a6d01a9be40b, type: 3}
   beamLength: 15
   rotationSpeed: 20

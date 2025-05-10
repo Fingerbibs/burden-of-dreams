@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   deathPattern: {fileID: 11400000, guid: 433dadfa9b399ae408809775d4ea8f5d, type: 2}
-  fireCooldown: 1
+  fireCooldown: 100
   pattern: {fileID: 11400000, guid: 4fe7cb4feea1f464cac2f6a6e39e4ba7, type: 2}
   turnSpeed: 80
   currentBeam: {fileID: 4186352805985378261, guid: 2672c466f3d90204bb42a6d01a9be40b, type: 3}

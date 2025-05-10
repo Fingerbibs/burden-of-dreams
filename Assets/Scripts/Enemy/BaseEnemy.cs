@@ -3,6 +3,7 @@ using System.Collections;
 
 public abstract class BaseEnemy : MonoBehaviour
 {
+    public LevelBounds bounds;
     protected EnemyMovement movement;
     protected EnemyPolarity polarity;
     protected Renderer renderer;
@@ -28,7 +29,7 @@ public abstract class BaseEnemy : MonoBehaviour
 
     protected virtual void Start(){}
 
-    public void Initialize(Transform[] path, Vector3 offset)
+    public virtual void Initialize(Transform[] path, Vector3 offset)
     {
         movement?.Initialize(path, offset);
     }
@@ -83,6 +84,14 @@ public abstract class BaseEnemy : MonoBehaviour
     public void ReleaseReward()
     {
         deathPattern.Fire(transform, polarity.polarity);
+    }
+
+    public bool IsInsideBounds()
+    {
+        Vector3 p = transform.position;
+        return p.x >= -5f && p.x <= 5f
+            && p.y >= -10f && p.y <= 10f
+            && p.z >= -8f && p.z <= 7f;
     }
 
     protected virtual void Update(){}

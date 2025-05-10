@@ -12,4 +12,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918521c54bea1dd4aac3bf6ce1abafbb, type: 3}
   m_Name: EnemyWave6
   m_EditorClassIdentifier: 
-  events: []
+  events:
+  - time: 0
+    enemyGroups:
+    - enemies:
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
+      spawnOffsetStep: {x: 1, y: 0, z: 0}
+      pathOffset: {x: -4, y: 0, z: -1}
+    - enemies:
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      groupSpawnDelay: 0.5
+      spawnInterval: 0
+      path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
+      spawnOffsetStep: {x: 1, y: 0, z: 0}
+      pathOffset: {x: -2, y: 0, z: 1}
+  - time: 14
+    enemyGroups:
+    - enemies:
+      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
+      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
+      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
+      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
+      spawnOffsetStep: {x: 3, y: 0, z: 0}
+      pathOffset: {x: -4, y: 0, z: -1}
+    - enemies:
+      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
+      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
+      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
+      spawnOffsetStep: {x: 3, y: 0, z: 0}
+      pathOffset: {x: -1.25, y: 0, z: -1}
+  - time: 15
+    enemyGroups:
+    - enemies:
+      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
+      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
+      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
+      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
+      spawnOffsetStep: {x: 3, y: 0, z: 0}
+      pathOffset: {x: -4, y: 0, z: 1}
+    - enemies:
+      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
+      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
+      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
+      spawnOffsetStep: {x: 3, y: 0, z: 0}
+      pathOffset: {x: -1.25, y: 0, z: 1}

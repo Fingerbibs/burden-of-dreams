@@ -10,8 +10,8 @@ public class BeamPattern : BulletPattern
 
     public override void Fire(Transform origin, Polarity polarity)
     {
-        GameObject beam = Instantiate(beamPrefab, origin.position, origin.rotation);
-        changeBulletPolarity(beam, polarity);
+        // GameObject beam = Instantiate(beamPrefab, origin.position, origin.rotation);
+        // changeBulletPolarity(beam, polarity);
         FireAndReturn(origin, polarity);
     }
 

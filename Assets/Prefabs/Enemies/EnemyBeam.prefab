@@ -166,5 +166,5 @@ MonoBehaviour:
   origin: {fileID: 0}
   extendDuration: 2
   fullLength: 15
-  trackingDuration: 6
-  rotationSpeed: 30
+  trackingDuration: 10
+  rotationSpeed: 60

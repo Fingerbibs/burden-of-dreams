@@ -3138,7 +3138,7 @@ MonoBehaviour:
           m_MethodName: TriggerWave
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: e5e3eb289244dad4a8de20314599e8a0, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: a11a1b0117ddc7e46a3ef2fbeb62e89e, type: 2}
             m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -3236,7 +3236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLives: 3
   startupTime: 0
-  invincibilityDuration: 1
+  invincibilityDuration: 3
   livesUI: {fileID: 523083647}
   gameOverScene: GameOver
 --- !u!114 &1140922958

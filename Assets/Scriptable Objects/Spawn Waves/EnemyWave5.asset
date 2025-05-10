@@ -29,3 +29,41 @@ MonoBehaviour:
       path: {fileID: 1492155526142391969, guid: 79194f2fad1958b4e8c3acfdf241f85b, type: 3}
       spawnOffsetStep: {x: 0, y: 0, z: 0}
       pathOffset: {x: 0, y: 0, z: 0}
+  - time: 6
+    enemyGroups:
+    - enemies:
+      - {fileID: 5351230466510774750, guid: 9b0f3f20fd4243343bd4e0bdcb065f79, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 3450941027281198091, guid: 3e9f2222038fc0c45bbe3d9ce63a47af, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}
+    - enemies:
+      - {fileID: 2579416163840797706, guid: a630657c329d94a40a4379e8792fb031, type: 3}
+      groupSpawnDelay: 0.25
+      spawnInterval: 0
+      path: {fileID: 2427230224178634169, guid: 4657670a5019b674a864706b6efcd44d, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}
+  - time: 8
+    enemyGroups:
+    - enemies:
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      groupSpawnDelay: 0.25
+      spawnInterval: 0
+      path: {fileID: 5045447046009400851, guid: 762f6d7843e9a134cb02a4d12b629427, type: 3}
+      spawnOffsetStep: {x: -1.25, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 3}
+    - enemies:
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      groupSpawnDelay: 0.25
+      spawnInterval: 0
+      path: {fileID: 3605021579965105429, guid: 257570ca692afce468138bd12ca7b8f1, type: 3}
+      spawnOffsetStep: {x: 1.25, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 3}

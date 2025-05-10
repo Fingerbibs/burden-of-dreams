@@ -77,8 +77,9 @@ public class AudioManager : MonoBehaviour
     // Menu
     public void PlayMenuTheme() => PlayMusic(library.menuTheme);
     public void PlayMenuHover() => PlaySFX(library.menuHover, false, 0.05f);
-    public void PlayMenuSelect() => PlaySFX(library.menuSelect, false, 0.8f);
+    public void PlayMenuSelect() => PlaySFX(library.menuSelect, false, 0.1f);
     public void PlayDeath3() => PlayMusic(library.Death3);
+    public void PlayQuoteTheme() => PlayMusic(library.quoteTheme);
 
     // Stage
     public void PlayStage1Theme() => PlayMusic(library.stage1Theme);

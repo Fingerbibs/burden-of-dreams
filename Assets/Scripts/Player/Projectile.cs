@@ -30,7 +30,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && IsInsideBounds())
         {
             BaseEnemy enemy = other.GetComponent<BaseEnemy>();
             EnemyPolarity enemyPolarity = enemy.GetComponent<EnemyPolarity>();
@@ -46,6 +46,14 @@ public class Projectile : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    public bool IsInsideBounds()
+    {
+        Vector3 p = transform.position;
+        return p.x >= -5f && p.x <= 5f
+            && p.y >= -10f && p.y <= 10f
+            && p.z >= -8f && p.z <= 7f;
     }
 
 }

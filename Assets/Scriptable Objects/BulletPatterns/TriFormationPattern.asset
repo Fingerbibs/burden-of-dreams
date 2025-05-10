@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TriFormationPattern
   m_EditorClassIdentifier: 
   fireRate: 1
-  projectilePrefab: {fileID: 1023532104570401300, guid: 07eb6a913b06f1e449b138eb8cbdf812, type: 3}
+  projectilePrefab: {fileID: 8236385953832523590, guid: 1ad589b9b9c96d34bbd602fd4fa5e5be, type: 3}
   spacing: 0.5
   speed: 10
