@@ -19,9 +19,15 @@ public class PlayerPolarityController : MonoBehaviour
     private Color darkColor = Color.black;
     private bool isRotating = false;
 
+    private GameObject firePoint1;
+    private GameObject firePoint2;
+
     void Start()
     {
         playerMaterial = GetComponent<Renderer>().material;
+
+        firePoint1 = transform.GetChild(1).gameObject;
+        firePoint2 = transform.GetChild(2).gameObject;
     }
 
     void Update()
@@ -40,6 +46,17 @@ public class PlayerPolarityController : MonoBehaviour
             // Switch polarity
             currentPolarity = currentPolarity == Polarity.Light ? Polarity.Dark : Polarity.Light;
 
+            // Change fire points
+            float targetX = currentPolarity == Polarity.Light ? -1f : 1f;
+
+            Vector3 lp1 = firePoint1.transform.localPosition;
+            lp1.x = targetX;
+            firePoint1.transform.localPosition = lp1;
+
+            Vector3 lp2 = firePoint2.transform.localPosition;
+            lp2.x = targetX;
+            firePoint2.transform.localPosition = lp2;
+            
             // Flip player around Y-axis
             float targetY = currentPolarity == Polarity.Light ? 90f : 270f;
             StartCoroutine(RotateToY(targetY));

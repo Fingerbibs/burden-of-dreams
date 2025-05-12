@@ -4,15 +4,16 @@ public class BigBoy : BaseEnemy
 {
     public float fireCooldown = 1f;
     public BulletPattern pattern;
-    public Vector3 rotationSpeed = new Vector3(90f, 90f, 90f); // degrees per second
+    
+    protected override void Start()
+    {
+        transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+    }
 
     protected override void Update()
     {
-
-        transform.Rotate(rotationSpeed * Time.deltaTime);
-        
         fireCooldown -= Time.deltaTime;
-        if (fireCooldown <= 0f)
+        if (fireCooldown <= 0f && IsInsideBounds())
         {
             if (pattern != null)
             {

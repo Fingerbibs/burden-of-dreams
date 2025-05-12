@@ -31,9 +31,11 @@ public class RewardPattern : BulletPattern
             changeBulletPolarity(bullet, polarity);
 
             // Move towards player
-            Rigidbody rb = bullet.GetComponent<Rigidbody>();
-            if (rb != null)
-                rb.linearVelocity = directionToPlayer * speed;
+            // Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            // if (rb != null)
+            //     rb.linearVelocity = directionToPlayer * speed;
+
+            bullet.transform.position += directionToPlayer * speed * Time.deltaTime;
         }
     }
 }

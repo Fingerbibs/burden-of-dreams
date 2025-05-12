@@ -4,6 +4,32 @@ public class SuperMeter3D : MonoBehaviour
 {
     public GameObject[] notches; // The 10 cube notches (child objects)
     public Material notchMaterial; // Material for the notches (with _HeightCutoff)
+
+    private Vector3[] rotationAxes;   // Randomized rotation directions per notch
+    private float rotationSpeed = 50f;
+
+    void Start()
+    {
+        ClearMeter();
+
+        // Generate random axes for each notch
+        rotationAxes = new Vector3[notches.Length];
+        for (int i = 0; i < notches.Length; i++)
+        {
+            rotationAxes[i] = Random.onUnitSphere; // random direction
+        }
+    }
+
+    void Update()
+    {
+        for (int i = 0; i < notches.Length; i++)
+        {
+            if (notches[i] != null)
+            {
+                notches[i].transform.Rotate(rotationAxes[i] * rotationSpeed * Time.deltaTime);
+            }
+        }
+    }
     
     public void UpdateMeter(float totalSuperMeterValue)
     {
@@ -17,7 +43,7 @@ public class SuperMeter3D : MonoBehaviour
             if (totalSuperMeterValue >= segmentEnd)
             {
                 // This notch is fully filled
-                cutoff = 9f;
+                cutoff = 10f;
             }
             else if (totalSuperMeterValue <= segmentStart)
             {
@@ -28,10 +54,18 @@ public class SuperMeter3D : MonoBehaviour
             {
                 // This notch is partially filled
                 float t = (totalSuperMeterValue - segmentStart) / 10f;
-                cutoff = Mathf.Lerp(7f, 9f, t);
+                cutoff = Mathf.Lerp(7f, 10f, t);
             }
 
             UpdateNotchHeightCutoff(i, cutoff);
+        }
+    }
+
+    public void ClearMeter()
+    {
+        for (int i = 0; i < notches.Length; i++)
+        {
+            UpdateNotchHeightCutoff(i, 7f); // 7f represents empty
         }
     }
 
@@ -42,7 +76,7 @@ public class SuperMeter3D : MonoBehaviour
             Material mat = notches[notchIndex].GetComponent<Renderer>().material;
             if (mat != null)
             {
-                mat.SetFloat("_HeightCutoff", targetCutoff); // Update _HeightCutoff of the material
+                mat.SetFloat("_CutoffHeight", targetCutoff); // Update _HeightCutoff of the material
             }
         }
     }

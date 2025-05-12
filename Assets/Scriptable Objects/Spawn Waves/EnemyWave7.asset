@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918521c54bea1dd4aac3bf6ce1abafbb, type: 3}
+  m_Name: EnemyWave7
+  m_EditorClassIdentifier: 
+  events:
+  - time: 0
+    enemyGroups:
+    - enemies:
+      - {fileID: 5861418988709166528, guid: 383ac2869d6088b4ca0dcf39f3351409, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 6595713925164686685, guid: 602d4bf3c0a66c54c985c4d1464eb62d, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}
+    - enemies:
+      - {fileID: 3146594115274331346, guid: f779baa0baebced479d942c88a59c402, type: 3}
+      groupSpawnDelay: 0.5
+      spawnInterval: 0
+      path: {fileID: 2873059825746084255, guid: 9294953568040074288785fefa51a880, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}
+  - time: 5
+    enemyGroups:
+    - enemies:
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 776628437148498810, guid: a0bce6738bd026b43a40489f524b2442, type: 3}
+      spawnOffsetStep: {x: -1.5, y: 0, z: 1.5}
+      pathOffset: {x: 0, y: 0, z: 0}
+    - enemies:
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 776628437148498810, guid: a0bce6738bd026b43a40489f524b2442, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+      pathOffset: {x: -1.5, y: 0, z: 0}
+  - time: 6
+    enemyGroups:
+    - enemies:
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 8870158727998727257, guid: 148240f0ea603fa4e8f9061391a1a310, type: 3}
+      spawnOffsetStep: {x: 1.5, y: 0, z: 1.5}
+      pathOffset: {x: 0, y: 0, z: 0}
+    - enemies:
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 8870158727998727257, guid: 148240f0ea603fa4e8f9061391a1a310, type: 3}
+      spawnOffsetStep: {x: 1.5, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}

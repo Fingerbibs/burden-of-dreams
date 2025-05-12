@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccac8fe2c7a7b548843d7328d89a025, type: 3}
+  m_Name: SideWavePattern
+  m_EditorClassIdentifier: 
+  fireRate: 0.25
+  projectilePrefab: {fileID: 8236385953832523590, guid: 1ad589b9b9c96d34bbd602fd4fa5e5be, type: 3}
+  clusterSize: 10
+  clusterSpacing: 0.5
+  speed: 0.05

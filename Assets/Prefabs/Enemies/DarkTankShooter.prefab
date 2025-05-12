@@ -125,9 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 12
-  deathPattern: {fileID: 11400000, guid: 433dadfa9b399ae408809775d4ea8f5d, type: 2}
+  deathPattern: {fileID: 11400000, guid: 291ba46281c4d224dac621219f158082, type: 2}
   fireCooldown: 2
-  pattern: {fileID: 11400000, guid: a147572dbb7b13c4ea3a87ae8ea02fb3, type: 2}
+  pattern: {fileID: 11400000, guid: 291ba46281c4d224dac621219f158082, type: 2}
   rotationSpeed: {x: 90, y: 15, z: 30}
 --- !u!114 &9149779969001585480
 MonoBehaviour:

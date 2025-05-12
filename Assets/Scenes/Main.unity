@@ -247,7 +247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &48009236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -484,6 +484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 106856229}
   - component: {fileID: 106856228}
+  - component: {fileID: 106856230}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -525,6 +526,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &106856230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106856227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37a859a817fafb449a2ca461d933d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 3925e7b39d8833d498a177a9210e7868, type: 2}
+  dialogueManager: {fileID: 1080459874}
 --- !u!1 &196792215
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &231544113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3088,6 +3103,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a0d165bc9029aa24cac72c771b5edc8d, type: 2}
     - {fileID: 11400000, guid: 113a462200f0bf84196a49fd37cf1545, type: 2}
     - {fileID: 11400000, guid: 91740417b7d9200409c66db40c3d9f75, type: 2}
+    - {fileID: 11400000, guid: e76b1df56386d45469ea3e6690b7c1c6, type: 2}
+    - {fileID: 11400000, guid: 57c21ff94a8ba8f4da30ccadeb38b0cb, type: 2}
+    - {fileID: 11400000, guid: 652bd36541f0dd840abfdcb137dbe42d, type: 2}
+    - {fileID: 11400000, guid: 5b1fd4a7abaaed04285f25269f64cc11, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -3138,7 +3157,7 @@ MonoBehaviour:
           m_MethodName: TriggerWave
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: a11a1b0117ddc7e46a3ef2fbeb62e89e, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: d2a8bd2c688712a45b72d17524e769f1, type: 2}
             m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -3167,6 +3186,74 @@ MonoBehaviour:
           m_Mode: 2
           m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: cb8c12c3971e4b44cb50746703354b66, type: 2}
+            m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1122281066}
+          m_TargetAssemblyTypeName: PatternedEnemySpawner, Scripts
+          m_MethodName: TriggerWave
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: a11a1b0117ddc7e46a3ef2fbeb62e89e, type: 2}
+            m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1122281066}
+          m_TargetAssemblyTypeName: PatternedEnemySpawner, Scripts
+          m_MethodName: TriggerWave
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 330a66b28853a314591f492e76e28c64, type: 2}
+            m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1122281066}
+          m_TargetAssemblyTypeName: PatternedEnemySpawner, Scripts
+          m_MethodName: TriggerWave
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: e7f831cb8d4f1d04f95eb48871878585, type: 2}
+            m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 106856230}
+          m_TargetAssemblyTypeName: MissileDialogue, Scripts
+          m_MethodName: toTerminal
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1122281066}
+          m_TargetAssemblyTypeName: PatternedEnemySpawner, Scripts
+          m_MethodName: TriggerWave
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: d2a8bd2c688712a45b72d17524e769f1, type: 2}
             m_ObjectArgumentAssemblyTypeName: EnemyWave, Scripts
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -3234,7 +3321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821647bf999da8f42bbbc721328e5a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 3
+  playerLives: 50
   startupTime: 0
   invincibilityDuration: 3
   livesUI: {fileID: 523083647}
@@ -5165,7 +5252,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.432
+  m_Volume: 0.375
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5259,7 +5346,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1808325271}
   - component: {fileID: 1808325273}
-  - component: {fileID: 1808325272}
   m_Layer: 7
   m_Name: SuperMeter3D
   m_TagString: Untagged
@@ -5293,37 +5379,11 @@ RectTransform:
   - {fileID: 766221187}
   m_Father: {fileID: 231544114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1808325272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808325270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bb01d6155c980a48871761cc72778f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notches:
-  - {fileID: 1857488023}
-  - {fileID: 916666644}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  notchMaterial: {fileID: 2100000, guid: 73403f437e926fd429ec07f08a67de0e, type: 2}
 --- !u!114 &1808325273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5336,8 +5396,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb01d6155c980a48871761cc72778f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notches: []
-  notchMaterial: {fileID: 0}
+  notches:
+  - {fileID: 766221186}
+  - {fileID: 1382901485}
+  - {fileID: 342332620}
+  - {fileID: 1902540773}
+  - {fileID: 14718400}
+  - {fileID: 964935999}
+  - {fileID: 300610359}
+  - {fileID: 1408329648}
+  - {fileID: 1471919771}
+  - {fileID: 1880493930}
+  - {fileID: 916666644}
+  - {fileID: 1857488023}
+  notchMaterial: {fileID: 2100000, guid: 73403f437e926fd429ec07f08a67de0e, type: 2}
 --- !u!1 &1829830999
 GameObject:
   m_ObjectHideFlags: 0
@@ -5832,7 +5904,7 @@ RectTransform:
   m_Father: {fileID: 1498302988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

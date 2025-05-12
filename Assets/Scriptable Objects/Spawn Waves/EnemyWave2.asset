@@ -21,6 +21,7 @@ MonoBehaviour:
       - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
       - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
       - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
       groupSpawnDelay: 0
       spawnInterval: 0
       path: {fileID: 5045447046009400851, guid: 762f6d7843e9a134cb02a4d12b629427, type: 3}
@@ -29,6 +30,7 @@ MonoBehaviour:
   - time: 4
     enemyGroups:
     - enemies:
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
       - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
       - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
       - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}

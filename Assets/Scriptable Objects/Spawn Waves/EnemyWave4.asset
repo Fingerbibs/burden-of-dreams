@@ -33,15 +33,15 @@ MonoBehaviour:
   - time: 0.75
     enemyGroups:
     - enemies:
-      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
-      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
       groupSpawnDelay: 0
       spawnInterval: 0
       path: {fileID: 131290669984566314, guid: 750692a7e0dbb324cbe52ca54c5fd89d, type: 3}
       spawnOffsetStep: {x: -1.5, y: 0, z: 1.5}
       pathOffset: {x: 0, y: 0, z: 0}
     - enemies:
-      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
       groupSpawnDelay: 0
       spawnInterval: 0
       path: {fileID: 131290669984566314, guid: 750692a7e0dbb324cbe52ca54c5fd89d, type: 3}
@@ -50,15 +50,15 @@ MonoBehaviour:
   - time: 5
     enemyGroups:
     - enemies:
-      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
-      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
       groupSpawnDelay: 0
       spawnInterval: 0
       path: {fileID: 7011480361619706703, guid: 7e8d217f5a21d3a46bb74cd3b38fb259, type: 3}
       spawnOffsetStep: {x: 1.5, y: 0, z: 1.5}
       pathOffset: {x: 0, y: 0, z: 0}
     - enemies:
-      - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
+      - {fileID: 8716633509513687019, guid: 9bd1fada73771ec4da963ba5e35f3db3, type: 3}
       groupSpawnDelay: 0
       spawnInterval: 0
       path: {fileID: 7011480361619706703, guid: 7e8d217f5a21d3a46bb74cd3b38fb259, type: 3}

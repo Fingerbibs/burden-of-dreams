@@ -15,5 +15,4 @@ MonoBehaviour:
   fireRate: 1
   rewardBulletPrefab: {fileID: 7326661698262851570, guid: 95591ab2a61c2bf449f76aeb9094ab09, type: 3}
   bulletCount: 5
-  spawnRadius: 1
-  speed: 1
+  speed: 2

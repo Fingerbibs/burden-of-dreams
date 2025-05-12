@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SuperMeter : MonoBehaviour
 {
@@ -50,29 +51,42 @@ public class SuperMeter : MonoBehaviour
     {
         missileDialogue.toTerminal();
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        BaseEnemy enemyBounds;
+
+        // Filter enemies that are inside bounds
+        List<GameObject> validEnemies = new List<GameObject>();
+        foreach (var enemy in enemies)
+        {
+            enemyBounds = enemy.GetComponent<BaseEnemy>();
+            if (enemyBounds.IsInsideBounds())
+            {
+                validEnemies.Add(enemy);
+            }
+        }
 
         int chargeCount = GetChargeCount();
-        if (chargeCount <= 0 || enemies.Length == 0) return;
+        if (chargeCount <= 0 || validEnemies.Count == 0) return;
 
-        int missilesToFire = Mathf.Min(chargeCount, enemies.Length);
-
+        int missilesToFire = Mathf.Min(chargeCount, validEnemies.Count);
+        Debug.Log($"Super Meter  = {superMeter}");
         for (int i = 0; i < missilesToFire; i++)
         {
-            BaseEnemy target = enemies[i].GetComponent<BaseEnemy>();
+            BaseEnemy target = validEnemies[i].GetComponent<BaseEnemy>();
             EnemyPolarity targetPolarity = target.GetComponent<EnemyPolarity>();
 
-            // Apply damage based on polarity logic
             int damage = (targetPolarity.polarity != playerPolarity) ? baseDamage * 2 : baseDamage;
             target.TakeDamage(damage, playerPolarity);
 
-            // Draw laser line
             StartCoroutine(DrawLaserLine(firePosition, target.transform.position));
         }
 
-        // Subtract charge
         superMeter -= missilesToFire * 10f;
+        superMeter = Mathf.Clamp(superMeter, 0f, superMeterMax);
+        Debug.Log($"Super Meter  = {superMeter}");
         if (superMeterSlider != null)
             superMeterSlider.value = superMeter;
+
+        superMeter3D.UpdateMeter(superMeter);
 
     }
 

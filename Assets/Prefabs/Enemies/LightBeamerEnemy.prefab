@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7810694976325532256}
   - component: {fileID: 6647380777617682199}
   - component: {fileID: 6144312907503845499}
-  - component: {fileID: 5578863742783198313}
   - component: {fileID: 7255305631640591485}
+  - component: {fileID: 7173873857721264}
   m_Layer: 10
   m_Name: LightBeamerEnemy
   m_TagString: Enemy
@@ -126,24 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
---- !u!114 &5578863742783198313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5351230466510774750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af66c52777ff6b4d903f194e0654aab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
-  deathPattern: {fileID: 11400000, guid: 433dadfa9b399ae408809775d4ea8f5d, type: 2}
-  fireCooldown: 100
-  pattern: {fileID: 11400000, guid: 4fe7cb4feea1f464cac2f6a6e39e4ba7, type: 2}
-  turnSpeed: 80
-  currentBeam: {fileID: 4186352805985378261, guid: 2672c466f3d90204bb42a6d01a9be40b, type: 3}
 --- !u!114 &7255305631640591485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,3 +141,21 @@ MonoBehaviour:
   polarity: 0
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   darkColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &7173873857721264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5351230466510774750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af66c52777ff6b4d903f194e0654aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  deathPattern: {fileID: 11400000, guid: 433dadfa9b399ae408809775d4ea8f5d, type: 2}
+  fireCooldown: 1
+  pattern: {fileID: 11400000, guid: 4fe7cb4feea1f464cac2f6a6e39e4ba7, type: 2}
+  turnSpeed: 80
+  currentBeam: {fileID: 0}

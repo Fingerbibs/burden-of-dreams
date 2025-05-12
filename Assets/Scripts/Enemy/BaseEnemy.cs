@@ -3,7 +3,6 @@ using System.Collections;
 
 public abstract class BaseEnemy : MonoBehaviour
 {
-    public LevelBounds bounds;
     protected EnemyMovement movement;
     protected EnemyPolarity polarity;
     protected Renderer renderer;
@@ -90,8 +89,8 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         Vector3 p = transform.position;
         return p.x >= -5f && p.x <= 5f
-            && p.y >= -10f && p.y <= 10f
-            && p.z >= -8f && p.z <= 7f;
+            && p.y >= -100f && p.y <= 100f
+            && p.z >= -8f && p.z <= 6f;
     }
 
     protected virtual void Update(){}

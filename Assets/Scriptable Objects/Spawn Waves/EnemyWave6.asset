@@ -40,50 +40,74 @@ MonoBehaviour:
       - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
       - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
       - {fileID: 6275756744965462868, guid: 933da5afceb8c0e4f97b79ea5bbf3109, type: 3}
-      groupSpawnDelay: 0.5
+      groupSpawnDelay: 0.6
       spawnInterval: 0
       path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
       spawnOffsetStep: {x: 1, y: 0, z: 0}
       pathOffset: {x: -2, y: 0, z: 1}
-  - time: 14
+  - time: 13
     enemyGroups:
     - enemies:
       - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
       - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
       - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
-      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
       groupSpawnDelay: 0
       spawnInterval: 0
       path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
-      spawnOffsetStep: {x: 3, y: 0, z: 0}
-      pathOffset: {x: -4, y: 0, z: -1}
+      spawnOffsetStep: {x: 4, y: 0, z: 0}
+      pathOffset: {x: -4, y: 0, z: -2}
     - enemies:
       - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
       - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
-      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
       groupSpawnDelay: 0
       spawnInterval: 0
       path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
-      spawnOffsetStep: {x: 3, y: 0, z: 0}
-      pathOffset: {x: -1.25, y: 0, z: -1}
-  - time: 15
+      spawnOffsetStep: {x: 4, y: 0, z: 0}
+      pathOffset: {x: -1, y: 0, z: -1}
+  - time: 15.25
     enemyGroups:
     - enemies:
       - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
       - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
       - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
-      - {fileID: 2184773383054831192, guid: eba52ae6bbc76014ba218c78c289e016, type: 3}
-      groupSpawnDelay: 0
+      groupSpawnDelay: 1.1
       spawnInterval: 0
       path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
-      spawnOffsetStep: {x: 3, y: 0, z: 0}
+      spawnOffsetStep: {x: 4, y: 0, z: 0}
       pathOffset: {x: -4, y: 0, z: 1}
     - enemies:
       - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
       - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
-      - {fileID: 6736174843536233528, guid: 6c38757420e9b214aab3193d6d09dbd7, type: 3}
-      groupSpawnDelay: 0
+      groupSpawnDelay: 0.25
       spawnInterval: 0
       path: {fileID: 1640306746751175285, guid: c3836b34448ef164ea0c24834c4ffc44, type: 3}
-      spawnOffsetStep: {x: 3, y: 0, z: 0}
-      pathOffset: {x: -1.25, y: 0, z: 1}
+      spawnOffsetStep: {x: 4, y: 0, z: 0}
+      pathOffset: {x: -1, y: 0, z: 1}
+  - time: 15
+    enemyGroups:
+    - enemies:
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 395756413215406369, guid: a4363a9a72790a440bec7ff7d2e17611, type: 3}
+      spawnOffsetStep: {x: 1.5, y: 0, z: 0}
+      pathOffset: {x: -4, y: 0, z: 1}
+    - enemies:
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      - {fileID: 3450538451293031992, guid: 898330a13a7197345b0e13ee289252d6, type: 3}
+      - {fileID: 3601354687017473525, guid: d3a5bb365d8fed443aa5e670e1947639, type: 3}
+      groupSpawnDelay: 1
+      spawnInterval: 0
+      path: {fileID: 395756413215406369, guid: a4363a9a72790a440bec7ff7d2e17611, type: 3}
+      spawnOffsetStep: {x: 1.5, y: 0, z: 0}
+      pathOffset: {x: -4, y: 0, z: 1}

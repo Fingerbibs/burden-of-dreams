@@ -27,7 +27,7 @@ public class BeamerEnemy : BaseEnemy
 
         // Beamer-specific setup
         currentBeam = null;
-        fireCooldown = 1f;
+        fireCooldown = 2f;
         hasFired = false;
 
     }
@@ -64,7 +64,7 @@ public class BeamerEnemy : BaseEnemy
         }
         // 2) Handle firing
         fireCooldown -= Time.deltaTime;
-        if (fireCooldown <= 0f && pattern != null && isStationary && hasFired == false)
+        if (fireCooldown <= 0f && pattern != null && isStationary && hasFired == false && IsInsideBounds())
         {
             if (pattern is BeamPattern beamPattern) // Safely cast to BeamPattern
             {
