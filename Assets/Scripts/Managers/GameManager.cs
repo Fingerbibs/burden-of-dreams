@@ -65,6 +65,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ResetPlayerLives()
+    {
+        playerLives = 3;
+        livesUI.UpdateLives(playerLives);
+    }
+
     private void RespawnPlayer(GameObject player)
     {
         StartCoroutine(RespawnFullSequence(player));
@@ -164,7 +170,7 @@ public class GameManager : MonoBehaviour
         shieldMaterial.color = faded;
     }
 
-    private void PlayerControllable(GameObject player, bool controllable){
+    public void PlayerControllable(GameObject player, bool controllable){
         var movement = player.GetComponent<PlayerMovement>();
         var shooting = player.GetComponent<PlayerShooting>();
         var polarity = player.GetComponent<PlayerPolarityController>();

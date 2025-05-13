@@ -30,7 +30,7 @@ public class PlayerShooting : MonoBehaviour
             fireCooldown = fireRate;
         }
 
-        if (((Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame) || Input.GetKeyDown(KeyCode.A)) && fireCooldown <= 0f)
+        if (((Gamepad.current != null && Gamepad.current.buttonWest.wasPressedThisFrame) || Input.GetKeyDown(KeyCode.A)))
         {
             LaunchMissile();
         }

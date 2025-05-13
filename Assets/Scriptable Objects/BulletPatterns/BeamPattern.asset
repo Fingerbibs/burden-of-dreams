@@ -15,5 +15,5 @@ MonoBehaviour:
   fireRate: 1
   beamPrefab: {fileID: 4186352805985378261, guid: 2672c466f3d90204bb42a6d01a9be40b, type: 3}
   beamLength: 15
-  rotationSpeed: 20
+  rotationSpeed: 15
   trackingDuration: 6

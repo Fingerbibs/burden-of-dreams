@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdadfcbb620f3747956c86e6dceb145, type: 3}
+  m_Name: FloatPattern
+  m_EditorClassIdentifier: 
+  fireRate: 1
+  projectilePrefab: {fileID: 6305358821786129433, guid: 91c64db9c3176e945a56679f9ac6bb9e, type: 3}
+  bulletCount: 1
+  speed: 3
+  maxAngle: 45

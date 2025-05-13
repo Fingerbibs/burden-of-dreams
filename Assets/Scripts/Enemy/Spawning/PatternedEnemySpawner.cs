@@ -28,8 +28,14 @@ public class PatternedEnemySpawner : MonoBehaviour
             for (int j = 0; j < evt.enemyGroups.Length; j++)
             {
                 EnemyGroup group = evt.enemyGroups[j];
-                Vector3 po = group.pathOffset;
-                StartCoroutine(SpawnEnemyGroup(group, j, group.pathOffset));
+                if(group.enemies.Length == 1 && group.enemies[0].CompareTag("Boss")){
+                    SpawnBoss(group.enemies[0], group.path, group.pathOffset);
+                }
+                else
+                {
+                    Vector3 po = group.pathOffset;
+                    StartCoroutine(SpawnEnemyGroup(group, j, group.pathOffset));
+                }
             }
         }
     }
@@ -61,6 +67,27 @@ public class PatternedEnemySpawner : MonoBehaviour
             }
 
             yield return new WaitForSeconds(group.spawnInterval);
+        }
+    }
+    
+    public void SpawnBoss(GameObject bossPrefab, GameObject pathPrefab, Vector3 pathOffset)
+    {
+        GameObject pathInstance = Instantiate(pathPrefab);
+        pathInstance.transform.position += pathOffset;
+        pathInstance.transform.SetParent(transform);
+
+        Transform[] pathPoints = pathInstance.GetComponentsInChildren<Transform>();
+
+        GameObject bossGO = Instantiate(bossPrefab, Vector3.zero, Quaternion.identity);
+        FinalBoss finalBoss = bossGO.GetComponent<FinalBoss>();
+        
+        if (finalBoss != null)
+        {
+            finalBoss.Initialize(pathPoints, Vector3.zero);
+        }
+        else
+        {
+            Debug.LogWarning("Spawned boss is missing FinalBoss script.");
         }
     }
 }

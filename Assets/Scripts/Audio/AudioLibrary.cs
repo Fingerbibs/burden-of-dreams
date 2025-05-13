@@ -12,12 +12,18 @@ public class AudioLibrary : ScriptableObject
     public AudioClip playerDeath;
     public AudioClip disintegrate;
     public AudioClip enemyShoot;
+    public AudioClip bossPhaseEnd;
+    public AudioClip bossDeath;
+    public AudioClip bossSpawn;
+    public AudioClip bossHit;
+    public AudioClip bossPreDeath;
 
     [Header ("Menu SFX")]
     public AudioClip menuHover;
     public AudioClip menuSelect;
     public AudioClip Death3;
     public AudioClip quoteTheme;
+    public AudioClip VictoryTheme;
 
     [Header ("Music")]
     public AudioClip menuTheme;

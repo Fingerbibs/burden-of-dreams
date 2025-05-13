@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource musicSource;
     public AudioSource sfxSource;
+    public AudioSource stageSource;
     public AudioSource voiceSource;
 
     public AudioLibrary library;
@@ -47,6 +48,19 @@ public class AudioManager : MonoBehaviour
         sfxSource.Play();
     }
 
+    public void PlayStageFX(AudioClip clip,bool loop = false, float volume = 0.7f, float pan = 0){
+        stageSource.clip = clip;
+        stageSource.loop = loop;
+        stageSource.volume = volume;
+        stageSource.panStereo = pan;
+        stageSource.Play();
+    }
+    public void PlayStageFXOnce(AudioClip clip)
+    {
+        stageSource.PlayOneShot(clip, .5f);
+
+    }
+
     public void PlaySFXOnce(AudioClip clip, float volume = 1.0f){
         sfxSource.PlayOneShot(clip, volume);
     }
@@ -59,6 +73,7 @@ public class AudioManager : MonoBehaviour
     }
     
     public void PlayVoiceOnce(AudioClip clip, float volume = 1.0f){
+        voiceSource.loop = false;
         voiceSource.PlayOneShot(clip, volume);
     }
     
@@ -68,6 +83,10 @@ public class AudioManager : MonoBehaviour
 
     public void StopSFX(){
         sfxSource.Stop();
+    }
+
+    public void StopStage(){
+        stageSource.Stop();
     }
 
     //HELPER FUNCTIONS
@@ -91,6 +110,12 @@ public class AudioManager : MonoBehaviour
     public void PlayPlayerShift() => PlaySFXOnce(library.playerSwitch, 0.15f);
     public void PlayAbsorb() => PlaySFXOnce(library.playerAbsorb, 0.7f);
     public void PlayPlayerDeath() => PlaySFXOnce(library.playerDeath, 3f);
+    public void PlayBossPhase() => PlayStageFX(library.bossPhaseEnd, false, 0.5f, -0.3f);
+    public void PlayBossSpawn() => PlayStageFX(library.bossSpawn);
+    public void PlayBossHit() => PlayStageFX(library.bossHit,false, 0.1f, -0.45f);
+    public void PlayBossDeath() => PlayStageFX(library.bossDeath);
+    public void PlayBossPreDeath() => PlayStageFXOnce(library.bossPreDeath);
+
     
 
 }

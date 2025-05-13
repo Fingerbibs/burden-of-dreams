@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918521c54bea1dd4aac3bf6ce1abafbb, type: 3}
   m_Name: FinalBoss
   m_EditorClassIdentifier: 
-  events: []
+  events:
+  - time: 0
+    enemyGroups:
+    - enemies:
+      - {fileID: 2223147224691567929, guid: 60a1b2ed7795e0e43a0bf92a46144199, type: 3}
+      groupSpawnDelay: 0
+      spawnInterval: 0
+      path: {fileID: 8342029832951254390, guid: 679f65fc4f1095947a88fbba592e767b, type: 3}
+      spawnOffsetStep: {x: 0, y: 0, z: 0}
+      pathOffset: {x: 0, y: 0, z: 0}

@@ -37,7 +37,8 @@ public abstract class BaseEnemy : MonoBehaviour
     {
         if (isDead) return;
         health -= damage;
-
+        
+        AudioManager.Instance.PlayBossHit();
         if (health <= 0)
         {
             if(bulletPolarity == polarity.polarity)
@@ -90,7 +91,7 @@ public abstract class BaseEnemy : MonoBehaviour
         Vector3 p = transform.position;
         return p.x >= -5f && p.x <= 5f
             && p.y >= -100f && p.y <= 100f
-            && p.z >= -8f && p.z <= 6f;
+            && p.z >= -6f && p.z <= 6f;
     }
 
     protected virtual void Update(){}

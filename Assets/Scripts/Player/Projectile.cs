@@ -46,6 +46,13 @@ public class Projectile : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        if (other.CompareTag("Boss") && IsInsideBounds())
+        {
+            FinalBoss boss = other.GetComponent<FinalBoss>();
+            boss.TakeDamage(damage);
+                Destroy(gameObject);
+        }
     }
 
     public bool IsInsideBounds()

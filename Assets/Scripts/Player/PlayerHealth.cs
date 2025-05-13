@@ -52,6 +52,10 @@ public class PlayerHealth : MonoBehaviour
                 Debug.Log("Player collided with Bullet");
             }
         }
+        else if (other.CompareTag("Boss"))
+        {
+            HandleHit();
+        }
     }
 
     void HandleHit()

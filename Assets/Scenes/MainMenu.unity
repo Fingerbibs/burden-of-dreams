@@ -2586,6 +2586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1447561913}
   sfxSource: {fileID: 2040565325}
+  stageSource: {fileID: 0}
   voiceSource: {fileID: 62655674}
   library: {fileID: 11400000, guid: 4366e7788e1823c43a139d2f65e99837, type: 2}
 --- !u!1 &1743617983

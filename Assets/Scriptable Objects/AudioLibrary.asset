@@ -20,9 +20,15 @@ MonoBehaviour:
   playerDeath: {fileID: 8300000, guid: c7d53f018fd126047bf4867174a8a18c, type: 3}
   disintegrate: {fileID: 8300000, guid: 384870929b1b5e34d8484a2188580040, type: 3}
   enemyShoot: {fileID: 8300000, guid: b12c8ac4593c1dd478e22f91fe4b5b2c, type: 3}
+  bossPhaseEnd: {fileID: 8300000, guid: fdc2277b3ace4d446907327993798da9, type: 3}
+  bossDeath: {fileID: 8300000, guid: 04e1ecf2616b8a542820c1a728776969, type: 3}
+  bossSpawn: {fileID: 8300000, guid: c66aac99ceb8d344bbacc5ad5acd77ec, type: 3}
+  bossHit: {fileID: 8300000, guid: 4c86bb6a5dc1b0e43b214b30b3eb969e, type: 3}
+  bossPreDeath: {fileID: 8300000, guid: 09a6fad572bb48f40b2c6172f28efe40, type: 3}
   menuHover: {fileID: 8300000, guid: 4bbf13591f437ce4c917575b160dfc34, type: 3}
   menuSelect: {fileID: 8300000, guid: 101d18e9b5c9fca4a864e5f2e6f831c4, type: 3}
   Death3: {fileID: 8300000, guid: 2b69f2b6897db7b46a9d535ffb153186, type: 3}
   quoteTheme: {fileID: 8300000, guid: 40cae0ffe2f687947ae9d8bfe92b518e, type: 3}
+  VictoryTheme: {fileID: 0}
   menuTheme: {fileID: 8300000, guid: aea475909f8ed914c8411dd5af0bd070, type: 3}
   stage1Theme: {fileID: 8300000, guid: 8b43a930a77f337419e781f2a64573a9, type: 3}
